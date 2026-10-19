@@ -1,0 +1,1511 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krav Maga Edge</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Krav Maga Edge is a modern self-defense academy in Hyderabad. Train in person or online with Certified Krav Maga Instructor Mr. Ishwar Prasad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+<style>
+/* Layout: tactical ops console. Two-row header, full-bleed photo hero with four vertical-label tiles
+   overlapping its base, then centred "// label //" section headers over bordered dark panels with
+   corner brackets. Red #E40421 replaces the reference's olive as the single accent. */
+:root {
+  --bg: #0d0e10;
+  --panel: #131518;
+  --panel-2: #191b1f;
+  --line: #2a2d32;
+  --line-soft: #202328;
+  --fg: #f3f3f2;
+  --muted: #a4a8ae;
+  --dim: #6f747b;
+  --red: #E40421;
+  --red-rgb: 228, 4, 33;
+  --red-hover: #c4031c;
+  --red-tint: rgba(var(--red-rgb), .14);
+  --wa: #25d366;
+  --font: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --wrap: 1240px;
+  --gut-l: max(16px, env(safe-area-inset-left, 0px));
+  --gut-r: max(16px, env(safe-area-inset-right, 0px));
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: var(--gut-l); padding-right: var(--gut-r); }
+h1, h2, h3, h4 { margin: 0; font-stretch: 115%; font-weight: 700; text-transform: uppercase; line-height: 1.02; letter-spacing: .01em; text-wrap: balance; }
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+/* Labels */
+.tag { font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.slash { font-size: .74rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+.slash-red { color: var(--red); }
+.kicker { display: inline-flex; align-items: center; gap: 12px; font-size: .74rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); position: relative; padding: 10px 0 0 14px; }
+.kicker::before { content: ""; position: absolute; left: 0; top: 0; width: 12px; height: 12px; border-left: 2px solid var(--red); border-top: 2px solid var(--red); }
+.kicker .dots { width: 90px; height: 2px; background: repeating-linear-gradient(90deg, var(--muted) 0 3px, transparent 3px 7px); opacity: .7; }
+.kicker .dots::after { content: ""; display: block; width: 6px; height: 6px; border: 1px solid var(--muted); border-radius: 50%; margin: -2px 0 0 auto; }
+.flag { display: inline-block; font-size: .7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); padding-left: 8px; border-left: 2px solid var(--red); }
+.chip { display: inline-block; font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--fg); background: var(--red-tint); border: 1px solid rgba(var(--red-rgb), .35); padding: 3px 8px; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 42px; padding: 10px 22px; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; border: 1px solid transparent; transition: background .2s, border-color .2s, color .2s; cursor: pointer; white-space: nowrap; }
+.btn-red { background: var(--red); color: #fff; }
+.btn-red:hover { background: var(--red-hover); }
+.btn-line { border-color: rgba(243,243,242,.75); color: var(--fg); background: transparent; }
+.btn-line:hover { border-color: var(--red); color: #fff; background: var(--red-tint); }
+.btn-sm { min-height: 36px; padding: 8px 16px; font-size: .72rem; }
+.btn svg { width: 18px; height: 18px; flex: none; }
+
+/* Header */
+.site-head { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40; background: rgba(13,14,16,.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.head-top { display: flex; align-items: center; gap: 24px; padding-block: 14px; }
+.brand img { height: 44px; width: auto; }
+.head-info { flex: 1; display: flex; justify-content: center; }
+.head-info span { display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--line); padding: 8px 16px; color: var(--muted); font-size: .8rem; letter-spacing: .06em; min-width: 0; }
+.head-info svg { width: 16px; height: 16px; color: var(--red); flex: none; }
+.head-cta { display: flex; gap: 10px; }
+.nav-row { border-top: 1px solid var(--line-soft); }
+.nav { display: flex; align-items: center; gap: clamp(18px, 3vw, 44px); padding-block: 13px; overflow-x: auto; scrollbar-width: none; }
+.nav a { font-size: .74rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); white-space: nowrap; position: relative; }
+.nav a:hover { color: var(--fg); }
+.nav a.on { color: var(--red); }
+.menu-btn { display: none; background: none; border: 1px solid var(--line); padding: 9px 12px; cursor: pointer; }
+.menu-btn span { display: block; width: 20px; height: 2px; background: var(--fg); }
+.menu-btn span + span { margin-top: 5px; }
+
+/* Pages */
+.page[hidden] { display: none; }
+section.sec { padding-block: clamp(64px, 8vw, 104px); }
+.sec-alt { background: var(--panel); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+.sec-head { text-align: center; display: grid; gap: 12px; justify-items: center; margin-bottom: clamp(32px, 4vw, 48px); }
+.sec-head h2 { font-size: clamp(1.9rem, 4vw, 2.9rem); color: var(--red); }
+.sec-head p { max-width: 60ch; color: var(--fg); font-size: .98rem; }
+.sec-head-split { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 40px; }
+.sec-head-split > div { display: grid; gap: 12px; max-width: 640px; }
+.sec-head-split h2 { font-size: clamp(1.9rem, 4vw, 2.9rem); color: var(--red); }
+.sec-head-split p { color: var(--fg); }
+
+/* Hero */
+.hero { position: relative; background: #000 var(--img) 70% 35% / cover no-repeat; overflow: hidden; }
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(13,14,16,.96) 0%, rgba(13,14,16,.82) 32%, rgba(13,14,16,.15) 66%, rgba(13,14,16,0) 100%), linear-gradient(0deg, var(--bg) 0%, rgba(13,14,16,0) 38%); }
+.hero .wrap { position: relative; padding-block: clamp(56px, 8vw, 110px) clamp(170px, 18vw, 230px); }
+.hero-copy { max-width: 620px; display: grid; gap: 22px; }
+.hero h1 { font-size: clamp(2.7rem, 7vw, 5.4rem); line-height: .98; }
+.hero h1 .r { color: var(--red); display: block; }
+.hero p.sub { font-size: 1.02rem; max-width: 46ch; color: #e1e2e3; }
+.hero-btns { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.tiles { position: relative; z-index: 2; margin-top: clamp(-170px, -16vw, -130px); }
+.tiles-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.tile { position: relative; aspect-ratio: 4 / 4.4; overflow: hidden; border: 1px solid var(--line); background: #000; }
+.tile img { width: 100%; height: 100%; object-fit: cover; opacity: .62; transition: opacity .3s, transform .5s; }
+.tile:hover img { opacity: .85; transform: scale(1.04); }
+.tile::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,.75) 100%); }
+.tile b { position: absolute; left: 8px; top: 10px; z-index: 1; writing-mode: vertical-rl; transform: rotate(180deg); font-stretch: 115%; font-weight: 800; font-size: clamp(1.5rem, 3vw, 2.5rem); line-height: 1; letter-spacing: .02em; text-transform: uppercase; color: #fff; }
+.tile span { position: absolute; right: 12px; bottom: 12px; z-index: 1; font-size: .7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #fff; display: flex; align-items: center; gap: 8px; }
+.tile span::after { content: ""; width: 18px; height: 2px; background: var(--red); }
+
+/* Programs list (operations style) */
+.ops { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 20px; align-items: start; }
+.filters { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; border: 1px solid var(--line); background: var(--panel); padding: 8px; margin-bottom: 16px; }
+.filters button { background: none; border: 0; padding: 8px 14px; font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); cursor: pointer; }
+.filters button:hover { color: var(--fg); }
+.filters button[aria-pressed="true"] { background: var(--red); color: #fff; }
+.op-list { display: grid; gap: 14px; }
+.op { display: grid; grid-template-columns: 240px minmax(0, 1fr) 200px; gap: 20px; border: 1px solid var(--line); background: var(--panel); padding: 12px; }
+.op[hidden] { display: none; }
+.op-img { aspect-ratio: 4 / 3; overflow: hidden; background: #000; }
+.op-img img { width: 100%; height: 100%; object-fit: cover; }
+.op-body { display: grid; gap: 10px; align-content: center; min-width: 0; }
+.op-body h3 { font-size: clamp(1.3rem, 2.2vw, 1.65rem); }
+.op-body p { color: var(--muted); font-size: .92rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.op-side { display: grid; gap: 10px; align-content: center; border-left: 1px solid var(--line-soft); padding-left: 18px; }
+.meta { display: grid; gap: 8px; margin-bottom: 4px; }
+.meta li { display: flex; gap: 10px; align-items: center; font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.meta svg { width: 15px; height: 15px; color: var(--red); flex: none; }
+.op-side .btn { width: 100%; }
+
+.side { display: grid; gap: 14px; }
+.panel { border: 1px solid var(--line); background: var(--panel); padding: 18px; }
+.panel h4 { font-size: .82rem; letter-spacing: .14em; padding-left: 10px; border-left: 2px solid var(--red); margin-bottom: 14px; }
+.radar { position: relative; aspect-ratio: 1; max-width: 230px; margin: 0 auto; border-radius: 50%; overflow: hidden; background: radial-gradient(circle, rgba(var(--red-rgb), .10) 0%, rgba(var(--red-rgb), .02) 70%); }
+.radar svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.radar .sweep { position: absolute; inset: 0; border-radius: 50%; background: conic-gradient(from 0deg, rgba(var(--red-rgb), .55), rgba(var(--red-rgb), 0) 70deg, rgba(var(--red-rgb), 0) 360deg); }
+.radar-key { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px; margin-top: 14px; }
+.radar-key li { font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); display: flex; gap: 8px; align-items: center; }
+.radar-key li::before { content: ""; width: 6px; height: 6px; background: var(--red); flex: none; }
+.stat { display: flex; align-items: center; gap: 16px; border: 1px solid var(--line); background: var(--panel); padding: 16px 18px; }
+.stat svg { width: 40px; height: 40px; color: var(--fg); flex: none; opacity: .9; }
+.stat small { display: block; font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); line-height: 1.4; }
+.stat b { display: block; font-stretch: 115%; font-weight: 700; font-size: 1.75rem; line-height: 1.1; color: var(--red); font-variant-numeric: tabular-nums; }
+
+/* Bracket cards (journey style) */
+.brackets { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px; }
+.bc { position: relative; border: 1px solid var(--line); background: var(--panel-2); padding: 0 20px 22px; display: grid; gap: 12px; align-content: start; }
+.bc::after { content: ""; position: absolute; right: -9px; bottom: -9px; width: 18px; height: 18px; border-right: 2px solid var(--dim); border-bottom: 2px solid var(--dim); }
+.bc-top { display: flex; justify-content: space-between; align-items: start; margin: 0 -20px 6px; }
+.bc-top .tag { background: var(--line); color: var(--fg); padding: 5px 10px; font-size: .64rem; }
+.bc-ico { width: 46px; height: 50px; margin: 10px 12px 0 0; color: var(--fg); }
+.bc h3 { font-size: 1.2rem; }
+.bc p { color: var(--muted); font-size: .9rem; }
+.bc .btn { justify-self: start; margin-top: 4px; }
+
+/* Two-mode panels */
+.modes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.mode { border: 1px solid var(--line); background: var(--panel); display: grid; grid-template-rows: auto 1fr; }
+.mode-img { aspect-ratio: 16 / 7; overflow: hidden; position: relative; background: #000; }
+.mode-img img { width: 100%; height: 100%; object-fit: cover; opacity: .7; }
+.mode-img .chip { position: absolute; left: 12px; top: 12px; background: rgba(0,0,0,.65); }
+.mode-body { padding: 22px; display: grid; gap: 12px; align-content: start; }
+.mode-body h3 { font-size: 1.6rem; }
+.mode-body p { color: var(--muted); }
+.ticks { display: grid; gap: 8px; }
+.ticks li { display: flex; gap: 12px; align-items: baseline; font-size: .95rem; }
+.ticks li::before { content: ""; width: 8px; height: 8px; border: 2px solid var(--red); flex: none; transform: translateY(-1px); }
+.mode-foot { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+
+/* Instructor */
+.coach { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+.coach-photo { position: relative; max-width: 460px; width: 100%; border: 1px solid var(--line); padding: 10px; background: var(--panel); }
+.coach-photo img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.coach-photo::before, .coach-photo::after { content: ""; position: absolute; width: 28px; height: 28px; border-color: var(--red); border-style: solid; }
+.coach-photo::before { left: -6px; top: -6px; border-width: 2px 0 0 2px; }
+.coach-photo::after { right: -6px; bottom: -6px; border-width: 0 2px 2px 0; }
+.coach-body { display: grid; gap: 18px; }
+.coach-body h2 { font-size: clamp(2rem, 4.4vw, 3.2rem); }
+.coach-body .role { color: var(--muted); }
+.creds { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.cred { border: 1px solid var(--line); background: var(--panel); padding: 14px 16px; display: grid; gap: 2px; }
+.cred b { font-stretch: 115%; font-weight: 700; font-size: 1.5rem; color: var(--red); line-height: 1.1; }
+.cred span { font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+
+/* Gallery */
+.gallery { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 12px; }
+.gallery figure { margin: 0; overflow: hidden; border: 1px solid var(--line); background: #000; aspect-ratio: auto; }
+.gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.gallery figure:hover img { transform: scale(1.04); }
+.g1 { grid-column: span 7; aspect-ratio: 16 / 10; }
+.g2 { grid-column: span 5; aspect-ratio: 5 / 5.6; }
+.g3 { grid-column: span 4; aspect-ratio: 1; }
+.g4 { grid-column: span 8; aspect-ratio: 16 / 8; }
+.center { display: flex; justify-content: center; margin-top: 36px; }
+
+/* Closing band */
+.closing { position: relative; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: linear-gradient(90deg, rgba(13,14,16,.97) 0%, rgba(13,14,16,.85) 55%, rgba(13,14,16,.6) 100%), var(--img) center 30% / cover no-repeat; }
+.closing .wrap { padding-block: clamp(64px, 8vw, 100px); display: grid; gap: 22px; max-width: var(--wrap); }
+.closing p.belief { max-width: 62ch; font-size: 1.08rem; color: #e1e2e3; }
+.closing h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+.closing h2 span { display: block; }
+.closing h2 span:nth-child(2) { color: var(--red); }
+
+/* Page heads (inner pages) */
+.page-hero { position: relative; background: #000 var(--img) var(--pos, center 30%) / cover no-repeat; border-bottom: 1px solid var(--line); }
+.page-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(13,14,16,.97) 0%, rgba(13,14,16,.8) 45%, rgba(13,14,16,.35) 100%); }
+.page-hero .wrap.hero-copy { max-width: var(--wrap); }
+.page-hero .wrap { position: relative; padding-block: clamp(56px, 7vw, 96px); display: grid; gap: 18px; }
+.page-hero h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); max-width: 16ch; }
+.page-hero h1 .r { color: var(--red); }
+.page-hero p { max-width: 56ch; color: #e1e2e3; }
+.crumb { font-size: .72rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+.crumb a:hover { color: var(--fg); }
+.crumb b { color: var(--red); font-weight: 600; }
+
+/* About blocks */
+.duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.brief { border: 1px solid var(--line); background: var(--panel); padding: clamp(22px, 3vw, 34px); display: grid; gap: 14px; align-content: start; position: relative; }
+.brief::before { content: ""; position: absolute; left: -1px; top: -1px; width: 56px; height: 3px; background: var(--red); }
+.brief h3 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); }
+.brief p { color: #d6d7d9; font-size: 1.02rem; }
+.components { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 6px; }
+.components li { border: 1px solid var(--line); padding: 12px; display: grid; gap: 4px; background: var(--panel-2); }
+.components li b { font-size: .7rem; letter-spacing: .16em; color: var(--red); }
+.components li span { font-weight: 600; text-transform: uppercase; letter-spacing: .06em; font-size: .9rem; line-height: 1.25; }
+.values { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.value { border: 1px solid var(--line); background: var(--panel); padding: 26px 20px; display: grid; gap: 14px; justify-items: start; position: relative; }
+.value::after { content: ""; position: absolute; right: -8px; bottom: -8px; width: 16px; height: 16px; border-right: 2px solid var(--dim); border-bottom: 2px solid var(--dim); }
+.value svg { width: 40px; height: 40px; color: var(--red); }
+.value h3 { font-size: 1.35rem; }
+
+/* Program grid (programs page) */
+.prog-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px; }
+.prog-grid .bc[hidden] { display: none; }
+.post-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; align-items: start; }
+.post-img { display: block; width: calc(100% + 40px); max-width: none; margin: 0 -20px; aspect-ratio: 16 / 10; object-fit: cover; filter: grayscale(1) contrast(1.15) brightness(.88); }
+.post .bc-top { margin-top: 0; }
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; counter-reset: step; }
+.step { border: 1px solid var(--line); background: var(--panel); padding: 24px; display: grid; gap: 10px; align-content: start; }
+.step b { font-stretch: 115%; font-weight: 700; font-size: 2.2rem; color: var(--red); line-height: 1; }
+.step p { color: #d6d7d9; }
+
+/* Contact */
+.contact { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 20px; align-items: start; }
+.channels { display: grid; gap: 12px; }
+.channel { display: flex; align-items: center; gap: 16px; border: 1px solid var(--line); background: var(--panel); padding: 16px 18px; transition: border-color .2s; }
+.channel:hover { border-color: var(--red); }
+.channel svg { width: 28px; height: 28px; color: var(--red); flex: none; }
+.channel small { display: block; font-size: .68rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.channel strong { display: block; font-weight: 600; font-size: 1.02rem; overflow-wrap: anywhere; }
+.form { border: 1px solid var(--line); background: var(--panel); padding: clamp(20px, 3vw, 32px); display: grid; gap: 16px; }
+.form h3 { font-size: 1.5rem; }
+.form .row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.field { display: grid; gap: 6px; }
+.field label { font-size: .68rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.field input, .field select, .field textarea { width: 100%; background: var(--bg); border: 1px solid var(--line); padding: 11px 12px; font-size: .95rem; border-radius: 0; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--red); }
+.field textarea { min-height: 110px; resize: vertical; }
+.form-out { border: 1px solid rgba(var(--red-rgb), .4); background: var(--red-tint); padding: 14px 16px; display: grid; gap: 10px; }
+.form-out p { font-size: .92rem; }
+
+/* Footer */
+.site-foot { background: var(--panel); border-top: 1px solid var(--line); }
+.foot-main { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 32px; padding-block: 56px 40px; }
+.foot-brand { display: grid; gap: 14px; align-content: start; }
+.foot-brand img { height: 52px; width: auto; }
+.foot-brand p { color: var(--muted); font-size: .9rem; max-width: 34ch; }
+.socials { display: flex; gap: 10px; }
+.socials a { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid var(--line); }
+.socials a:hover { border-color: var(--red); }
+.socials svg { width: 18px; height: 18px; }
+.foot-col h4 { font-size: .78rem; letter-spacing: .16em; margin-bottom: 14px; }
+.foot-col ul { display: grid; gap: 8px; }
+.foot-col a, .foot-col li { color: var(--muted); font-size: .9rem; }
+.foot-col a:hover { color: var(--fg); }
+.foot-net { border-top: 1px solid var(--line-soft); }
+.foot-net .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding-block: 24px; }
+.foot-net h4 { font-size: 1.05rem; }
+.foot-net p { color: var(--muted); font-size: .88rem; }
+.foot-bar { border-top: 1px solid var(--line-soft); }
+.foot-bar .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-block: 16px; font-size: .78rem; color: var(--dim); }
+
+/* WhatsApp float */
+.wa-float { position: fixed; right: calc(18px + env(safe-area-inset-right, 0px)); bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 50; width: 56px; height: 56px; display: grid; place-items: center; background: var(--wa); border-radius: 50%; box-shadow: 0 8px 24px rgba(0,0,0,.5); }
+.wa-float svg { width: 30px; height: 30px; }
+
+@media (max-width: 1080px) {
+  .ops { grid-template-columns: minmax(0, 1fr); }
+  .side { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .side .panel { grid-row: span 3; }
+  .op { grid-template-columns: 200px minmax(0, 1fr); }
+  .op-side { grid-column: 1 / -1; border-left: 0; padding-left: 0; border-top: 1px solid var(--line-soft); padding-top: 12px; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; }
+  .op-side .meta { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 0; }
+  .op-side .btn { width: auto; }
+  .brackets, .prog-grid, .values, .post-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .foot-main { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .head-info { display: none; }
+  .head-top { justify-content: space-between; }
+}
+@media (max-width: 760px) {
+  .head-cta .btn-line { display: none; }
+  .menu-btn { display: block; }
+  .nav-row { display: none; }
+  .nav-row.open { display: block; }
+  .nav { flex-direction: column; align-items: stretch; gap: 0; padding-block: 6px; }
+  .nav a { padding: 12px 0; border-bottom: 1px solid var(--line-soft); }
+  .tiles-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero::before { background: linear-gradient(90deg, rgba(13,14,16,.92) 0%, rgba(13,14,16,.6) 100%), linear-gradient(0deg, var(--bg) 0%, rgba(13,14,16,0) 40%); }
+  .side { grid-template-columns: minmax(0, 1fr); }
+  .op { grid-template-columns: minmax(0, 1fr); }
+  .op-side { grid-template-columns: minmax(0, 1fr); }
+  .op-side .btn { width: 100%; }
+  .modes, .coach, .duo, .contact, .steps { grid-template-columns: minmax(0, 1fr); }
+  .gallery { grid-template-columns: minmax(0, 1fr); }
+  .gallery figure { grid-column: auto; aspect-ratio: 4 / 3; }
+  .form .row { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 520px) {
+  .brand img { height: 36px; }
+  .kicker .dots { display: none; }
+  .brackets, .prog-grid, .values, .foot-main, .creds, .post-grid { grid-template-columns: minmax(0, 1fr); }
+  .head-cta .btn { padding-inline: 14px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .radar .sweep { animation: sweep 4s linear infinite; }
+  @keyframes sweep { to { transform: rotate(360deg); } }
+  .page:not([hidden]) .hero-copy > * { animation: rise .6s cubic-bezier(.2,.7,.2,1) both; }
+  .page:not([hidden]) .hero-copy > *:nth-child(2) { animation-delay: .06s; }
+  .page:not([hidden]) .hero-copy > *:nth-child(3) { animation-delay: .12s; }
+  .page:not([hidden]) .hero-copy > *:nth-child(4) { animation-delay: .18s; }
+  @keyframes rise { from { transform: translateY(12px); } to { transform: none; } }
+}
+
+/* ===== Cinematic layer ===== */
+:root { --cond: 70; }
+body { font-size: 16.5px; line-height: 1.65; font-stretch: 100%; }
+body::after { content: ""; position: fixed; inset: 0; z-index: 100; pointer-events: none; opacity: .07; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+h1, h2, h3, h4 { font-stretch: 72%; font-weight: 800; letter-spacing: -.005em; line-height: .92; }
+h3 { line-height: 1; }
+.r { color: var(--red); }
+.sec-head h2, .sec-head-split h2 { color: var(--fg); font-size: clamp(2.6rem, 6vw, 4.6rem); }
+.sec-head p, .sec-head-split p { color: var(--muted); font-size: 1.05rem; }
+/* credit-style labels */
+.slash, .tag, .flag, .kicker, .crumb, .nav a, .btn, .chip, .meta li, .stat small, .cred span, .channel small, .field label, .radar-key li, .filters button, .testi-count, .tile span, .hero-stats span { font-stretch: 118%; }
+.slash { display: inline-flex; align-items: center; gap: 14px; color: var(--fg); letter-spacing: .32em; font-weight: 500; font-size: .7rem; }
+.slash::before, .slash::after { content: ""; width: 34px; height: 1px; background: var(--red); }
+.slash-red { color: var(--red); }
+.kicker { padding: 0; gap: 14px; color: var(--fg); letter-spacing: .32em; font-weight: 500; font-size: .7rem; }
+.kicker::before { position: static; width: 34px; height: 1px; border: 0; background: var(--red); }
+.tag, .flag { letter-spacing: .24em; font-weight: 500; }
+.nav a { letter-spacing: .22em; font-weight: 500; font-size: .7rem; }
+.btn { letter-spacing: .2em; font-weight: 600; font-size: .72rem; min-height: 46px; padding: 12px 26px; }
+.btn-sm { min-height: 38px; padding: 9px 18px; font-size: .68rem; }
+.btn-red { box-shadow: 0 10px 30px -12px rgba(var(--red-rgb), .8); }
+/* cinematic image grade */
+.op-img img, .tile img, .mode-img img, .gallery img, .coach-photo img { filter: grayscale(1) contrast(1.15) brightness(.88); }
+/* hero */
+.hero { background: #000; min-height: min(860px, 94vh); display: flex; align-items: center; }
+.hero > .wrap { width: 100%; }
+.hero-media { position: absolute; inset: -2%; background: var(--img) 68% 35% / cover no-repeat; filter: grayscale(1) contrast(1.2) brightness(.8); }
+.hero::before { z-index: 1; background:
+  radial-gradient(ellipse 80% 90% at 70% 40%, rgba(0,0,0,0) 0%, rgba(0,0,0,.55) 75%, rgba(0,0,0,.85) 100%),
+  linear-gradient(90deg, rgba(8,9,10,.97) 0%, rgba(8,9,10,.78) 34%, rgba(8,9,10,.1) 68%),
+  linear-gradient(0deg, var(--bg) 0%, rgba(13,14,16,0) 30%); }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(180deg, #000 0, #000 22px, transparent 22px, transparent calc(100% - 22px), #000 calc(100% - 22px)); opacity: .9; }
+.hero-flare { position: absolute; z-index: 1; left: 0; right: 0; top: 63%; height: 1px; background: linear-gradient(90deg, rgba(var(--red-rgb), 0) 0%, rgba(var(--red-rgb), .9) 48%, rgba(255,120,120,.95) 52%, rgba(var(--red-rgb), 0) 100%); box-shadow: 0 0 18px 2px rgba(var(--red-rgb), .55); opacity: .55; }
+.hero .wrap { z-index: 2; padding-block: clamp(80px, 10vw, 130px) clamp(190px, 19vw, 250px); }
+.hero-copy { gap: 26px; max-width: 660px; }
+.hero h1 { font-size: clamp(3.6rem, 10vw, 8.2rem); line-height: .86; }
+.hero p.sub { font-size: 1.08rem; color: #d7d8da; max-width: 50ch; }
+.hero-stats { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 0; margin-top: 46px; }
+.hero h1 { word-spacing: .06em; }
+.hero-stats > div { padding: 4px 28px 4px 0; display: grid; gap: 2px; }
+.hero-stats > div + div { padding-left: 28px; border-left: 1px solid rgba(255,255,255,.18); }
+.hero-stats b { font-stretch: 72%; font-weight: 800; font-size: clamp(2.2rem, 4vw, 3rem); line-height: 1; color: #fff; font-variant-numeric: tabular-nums; }
+.hero-stats span { font-size: .66rem; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); }
+.tiles { margin-top: clamp(-200px, -15vw, -150px); }
+.tile b { font-stretch: 70%; font-weight: 800; font-size: clamp(2rem, 4vw, 3.4rem); letter-spacing: 0; }
+.tile::before { content: ""; position: absolute; inset: 0; z-index: 1; background: var(--red); mix-blend-mode: multiply; opacity: 0; transition: opacity .35s; }
+.tile:hover::before { opacity: .45; }
+.tile b, .tile span { z-index: 2; }
+/* widescreen frames */
+.mode-img { aspect-ratio: 2.39 / 1; }
+.g1 { aspect-ratio: 2.39 / 1.4; }
+.g4 { aspect-ratio: 2.39 / 1; }
+.closing h2 { font-size: clamp(2.8rem, 7vw, 5.6rem); line-height: .9; }
+.page-hero h1 { font-size: clamp(3rem, 8vw, 6rem); line-height: .88; }
+.page-hero { background-image: none; }
+.page-hero::after { content: ""; position: absolute; inset: 0; z-index: 0; background: var(--img) var(--pos, center 30%) / cover no-repeat; filter: grayscale(1) contrast(1.2) brightness(.75); }
+.page-hero::before { z-index: 1; }
+.page-hero .wrap { z-index: 2; padding-block: clamp(80px, 10vw, 140px); }
+.stat b, .cred b, .step b { font-stretch: 72%; font-weight: 800; font-size: 2.2rem; }
+.bc h3 { font-size: 1.45rem; }
+.op-body h3 { font-size: clamp(1.6rem, 2.6vw, 2rem); }
+.mode-body h3, .form h3 { font-size: 2rem; }
+.brief h3 { font-size: clamp(1.7rem, 3vw, 2.3rem); }
+.value h3 { font-size: 1.7rem; }
+.coach-body h2 { font-size: clamp(2.6rem, 5.5vw, 4.2rem); }
+/* testimonials */
+.testi-stage { position: relative; max-width: 940px; margin: 0 auto; border: 1px solid var(--line); background: linear-gradient(135deg, var(--panel-2), var(--bg)); padding: clamp(32px, 5vw, 64px) clamp(22px, 6vw, 80px) 0; display: grid; gap: 28px; overflow: hidden; }
+.testi-stage::before { content: ""; position: absolute; left: 0; top: 0; width: 72px; height: 3px; background: var(--red); }
+.testi-mark { position: absolute; right: clamp(16px, 4vw, 48px); top: -24px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(9rem, 20vw, 15rem); line-height: 1; color: var(--red); opacity: .2; pointer-events: none; }
+.testi-body { display: grid; gap: 22px; position: relative; }
+.testi-ph { justify-self: start; }
+.testi-body blockquote { margin: 0; font-size: clamp(1.25rem, 2.4vw, 1.75rem); line-height: 1.45; font-weight: 300; color: var(--fg); max-width: 40ch; }
+.testi-who { display: grid; gap: 2px; padding-left: 14px; border-left: 2px solid var(--red); }
+.testi-who b { font-stretch: 72%; font-weight: 800; font-size: 1.4rem; text-transform: uppercase; }
+.testi-who span { font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); font-stretch: 118%; }
+.testi-nav { display: flex; align-items: center; gap: 14px; justify-content: flex-end; }
+.testi-count { font-size: .72rem; letter-spacing: .24em; color: var(--muted); font-variant-numeric: tabular-nums; min-width: 72px; text-align: center; }
+.arrow { width: 46px; height: 46px; display: grid; place-items: center; background: var(--red); border: 0; color: #fff; cursor: pointer; transition: background .2s; }
+.arrow:hover { background: var(--red-hover); }
+.arrow svg { width: 20px; height: 20px; }
+.testi-bar { height: 2px; background: var(--line); margin: 0 calc(-1 * clamp(22px, 6vw, 80px)); }
+.testi-bar i { display: block; height: 100%; width: 33%; background: var(--red); transition: width .5s ease; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-media { animation: kenburns 28s ease-in-out infinite alternate; }
+  @keyframes kenburns { from { transform: scale(1.02) translate(0, 0); } to { transform: scale(1.12) translate(-2%, -1.5%); } }
+  .hero-flare { animation: flare 6s ease-in-out infinite alternate; }
+  @keyframes flare { from { opacity: .3; } to { opacity: .7; } }
+  .testi-stage.swap .testi-body { animation: tfade .6s ease both; }
+  @keyframes tfade { from { transform: translateY(8px); } to { transform: none; } }
+}
+@media (max-width: 760px) {
+  .hero { min-height: 0; }
+  .hero::after { display: none; }
+  .hero-stats > div { padding-right: 18px; }
+  .hero-stats > div + div { padding-left: 18px; }
+  .testi-nav { justify-content: space-between; }
+}
+@media (max-width: 520px) {
+  .hero-stats > div { padding-right: 12px; }
+  .hero-stats > div + div { padding-left: 12px; }
+  .hero-stats b { font-size: 1.9rem; }
+  .hero-stats span { font-size: .56rem; letter-spacing: .14em; }
+  .tile span { display: none; }
+  .slash::before, .slash::after { width: 18px; }
+}
+/* hero logo loop */
+.hero { isolation: isolate; }
+.hero::after { z-index: 4; }
+.hero .wrap { transition: opacity .8s ease; }
+.hero.logo-on .wrap { opacity: 0; pointer-events: none; }
+.hero-logo { position: absolute; inset: 0; z-index: 3; background: #0b0d10; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .8s ease, visibility 0s .8s; }
+.hero.logo-on .hero-logo { opacity: 1; visibility: visible; transition: opacity .8s ease, visibility 0s; }
+.hero-logo video { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
+/* blurred fill across the whole hero, sharp logo framed in the visible screen */
+.hero-logo .hero-logo-bg { filter: blur(12px) brightness(.62) saturate(1.25); transform: scale(1.12); }
+.hero-logo .hero-logo-fg { height: min(calc(100% - 74px), calc(100vh - 112px)); object-position: 50% 50%;
+  -webkit-mask-image: linear-gradient(180deg, #000 80%, transparent); mask-image: linear-gradient(180deg, #000 80%, transparent); }
+.hero-logo::after { content: ""; position: absolute; inset: auto 0 0; height: 30%; background: linear-gradient(0deg, var(--bg), rgba(13,14,16,0)); }
+@media (max-aspect-ratio: 5/4) {
+  .hero-logo .hero-logo-bg { filter: blur(26px) brightness(.5) saturate(1.4); transform: scale(1.1); }
+  .hero-logo .hero-logo-fg { top: min(calc(50% - 37px), calc(50vh - 60px)); left: 50%; width: 145%; height: auto; transform: translate(-50%, -50%);
+    -webkit-mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent); }
+}
+/* photo-free layout */
+.hero-art { position: absolute; inset: 0; background:
+  radial-gradient(ellipse 55% 70% at 78% 42%, rgba(var(--red-rgb), .22), rgba(var(--red-rgb), 0) 70%),
+  repeating-linear-gradient(115deg, rgba(255,255,255,.025) 0 1px, transparent 1px 46px), #07080a; }
+.hero-art::after { content: ""; position: absolute; right: 3%; top: 50%; width: 38%; aspect-ratio: 600 / 219; transform: translateY(-62%); background: url(img/logo.png) center / contain no-repeat; opacity: .16; filter: grayscale(.2); }
+.hero-stats { grid-template-columns: repeat(4, auto); }
+.tile { background: linear-gradient(160deg, #191b1f 0%, #0c0d0f 70%); }
+.tile::after { background: radial-gradient(circle at 85% 18%, rgba(var(--red-rgb), .22), rgba(var(--red-rgb), 0) 55%); }
+.tile-ico { position: absolute; right: 16px; top: 16px; width: 34%; max-width: 74px; aspect-ratio: 1; color: var(--red); z-index: 2; transition: transform .35s; }
+.tile:hover .tile-ico { transform: scale(1.08); }
+.tile b { font-size: clamp(1.7rem, 3.2vw, 2.9rem); line-height: .95; }
+.tile span { left: 12px; justify-content: flex-end; text-align: right; }
+.op-ico { display: grid; place-items: center; background: radial-gradient(circle at 50% 50%, rgba(var(--red-rgb), .2), rgba(var(--red-rgb), 0) 65%), #0b0c0e; border: 1px solid var(--line-soft); }
+.op-ico svg { width: 34%; height: auto; aspect-ratio: 1; color: var(--red); }
+.mode-ico { display: grid; place-items: center; background: radial-gradient(ellipse at 50% 60%, rgba(var(--red-rgb), .22), rgba(var(--red-rgb), 0) 65%), #0b0c0e; border-bottom: 1px solid var(--line-soft); }
+.mode-ico svg { width: 64px; height: 64px; color: var(--red); }
+.coach-solo { grid-template-columns: minmax(0, 1fr); max-width: 860px; }
+.closing { background: radial-gradient(ellipse 60% 80% at 88% 30%, rgba(var(--red-rgb), .18), rgba(var(--red-rgb), 0) 70%), #0b0c0e; }
+.page-hero { background: radial-gradient(ellipse 60% 90% at 85% 30%, rgba(var(--red-rgb), .2), rgba(var(--red-rgb), 0) 70%), repeating-linear-gradient(115deg, rgba(255,255,255,.025) 0 1px, transparent 1px 46px), #07080a; }
+.page-hero::after, .page-hero::before { display: none; }
+.home-form { max-width: 860px; margin: 0 auto; }
+
+.form .row-3 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr); }
+.blog-empty { max-width: 720px; margin: 0 auto; text-align: center; display: grid; gap: 18px; justify-items: center; border: 1px solid var(--line); background: var(--panel); padding: clamp(32px, 6vw, 64px) clamp(20px, 5vw, 56px); }
+.blog-empty h2 { font-size: clamp(2rem, 5vw, 3.2rem); }
+.blog-empty p { color: var(--muted); max-width: 52ch; }
+#enquire { scroll-margin-top: 20px; }
+/* Krav Maga combat cycle */
+.cycle { max-width: 230px; margin: 0 auto; }
+.cycle svg { display: block; width: 100%; height: auto; overflow: visible; }
+.cyc-n circle { fill: #0b0c0e; stroke: #E40421; stroke-width: 1.5; }
+.cyc-n text { fill: #fff; font-size: 13px; font-weight: 700; text-anchor: middle; font-family: inherit; }
+.cyc-arc { transform-box: view-box; transform-origin: 100px 100px; transform: rotate(-90deg); }
+.cycle-key { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 12px; margin-top: 14px; }
+.cycle-key li { display: flex; gap: 8px; align-items: baseline; font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-stretch: 118%; }
+.cycle-key b { color: var(--red); font-weight: 700; }
+@media (prefers-reduced-motion: no-preference) {
+  .cyc-arc { animation: cyc-spin 6s linear infinite; }
+  @keyframes cyc-spin { from { transform: rotate(-90deg); } to { transform: rotate(270deg); } }
+  .cyc-n circle { animation: cyc-node 6s linear infinite; }
+  .cycle-key li { animation: cyc-key 6s linear infinite; }
+  .n2 circle, .cycle-key .n2 { animation-delay: 1.5s; }
+  .n3 circle, .cycle-key .n3 { animation-delay: 3s; }
+  .n4 circle, .cycle-key .n4 { animation-delay: 4.5s; }
+  @keyframes cyc-node { 0%, 22% { fill: #E40421; } 26%, 100% { fill: #0b0c0e; } }
+  @keyframes cyc-key { 0%, 22% { color: #fff; } 26%, 100% { color: var(--muted); } }
+}
+@media (max-width: 1080px) {
+  .hero-art::after { opacity: .1; }
+}
+@media (max-width: 760px) {
+  .hero-art::after { width: 80%; right: 50%; top: 18%; transform: translateX(50%); opacity: .08; }
+  .hero-stats { grid-template-columns: repeat(2, auto); row-gap: 18px; }
+  .hero-stats > div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .op-ico { aspect-ratio: 16 / 6; }
+  .op-ico svg { width: auto; height: 54%; }
+  .form .row-3 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .form .row-3 > :last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 520px) {
+  .tile span { display: flex; font-size: .56rem; letter-spacing: .1em; left: 8px; right: 8px; bottom: 10px; }
+  .tile span::after { display: none; }
+  .tile b { font-size: 1.7rem; top: 10px; }
+  .tile-ico { width: 30%; right: 10px; top: 10px; }
+}
+/* hero photo */
+.hero-photo { background:
+  linear-gradient(90deg, #07080a 0%, #07080a 40%, rgba(7,8,10,.55) 58%, rgba(7,8,10,0) 78%),
+  var(--hero-img, url(img/hero-aim.jpg)) right 0 top 8% / 66% auto no-repeat, #07080a; }
+.hero-photo::after { display: none; }
+@media (max-width: 760px) {
+  .hero-photo { background: linear-gradient(180deg, rgba(7,8,10,.55) 0%, rgba(7,8,10,.82) 55%, #07080a 100%), var(--hero-img, url(img/hero-aim.jpg)) 72% 30% / cover no-repeat, #07080a; }
+}
+/* header: one row, logo + menu spread across */
+.head-top { gap: clamp(20px, 2.4vw, 40px); padding-block: 12px; position: relative; }
+.brand { flex: none; }
+.brand img { height: 84px; }
+.head-top .nav-row { flex: 1; border: 0; min-width: 0; }
+.head-top .nav { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 0; overflow: visible; }
+.head-top .nav a { font-size: .74rem; letter-spacing: .1em; }
+.site-head .head-top { max-width: 1480px; }
+.head-cta { flex: none; }
+@media (max-width: 1180px) {
+  .head-top { justify-content: space-between; }
+  .brand img { height: 60px; }
+  .menu-btn { display: block; }
+  .head-top .nav-row { display: none; position: absolute; left: 0; right: 0; top: 100%; background: rgba(13,14,16,.98); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line); }
+  .head-top .nav-row.open { display: block; }
+  .head-top .nav { flex-direction: column; align-items: stretch; gap: 0; padding: 6px var(--gut-r) 6px var(--gut-l); }
+  .head-top .nav a { padding: 13px 0; border-bottom: 1px solid var(--line-soft); }
+  .head-top .nav a:last-child { border-bottom: 0; }
+}
+@media (max-width: 520px) { .brand img { height: 46px; } }
+/* closing + enquiry side by side */
+.closing-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 64px); align-items: center; }
+.closing-copy { display: grid; gap: 22px; align-content: center; }
+.closing-split h2 { font-size: clamp(2.4rem, 4.6vw, 4.4rem); }
+.closing-split .home-form { max-width: none; margin: 0; }
+.closing-split .form { gap: 12px; padding: clamp(18px, 2.4vw, 28px); }
+.closing-split .form h3 { font-size: 1.6rem; }
+.closing-split .field input, .closing-split .field select, .closing-split .field textarea { padding: 9px 11px; }
+.closing-split .field textarea { min-height: 56px; }
+.closing-split > .wrap { padding-block: 28px; }
+.closing-split .field { gap: 4px; }
+.closing-split .form .row { gap: 12px; }
+.closing-split .form .row-3 { grid-template-columns: minmax(0, .8fr) minmax(0, 1fr) minmax(0, 1.4fr); }
+#enquire { scroll-margin-top: 110px; }
+@media (max-width: 960px) {
+  .closing-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 760px) {
+  .closing-split .form .row-3 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-wa" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.3.6 4.5 1.8 6.5L3 29l6.9-1.8c1.9 1 4 1.6 6.1 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6C5.3 10 10.1 5.3 16 5.3S26.7 10 26.7 15.8 21.9 26.4 16 26.4zm5.9-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1c-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2s0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5s0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.1 1.1-1.1 2.7 1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.5 4.9 2.7 1.1 3.3.9 3.9.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M4 21c1.2-4 4.3-6 8-6s6.8 2 8 6"/></symbol>
+    <symbol id="i-group" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="9" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M2.5 20c.9-3.4 3.4-5.2 6.5-5.2s5.6 1.8 6.5 5.2M15.5 14.6c2.8-.3 5 1.3 6 4.4"/></symbol>
+    <symbol id="i-screen" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M8 20h8M12 16v4"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M4 21V5l8-2v18M12 8h8v13M2 21h20M7 8h2M7 12h2M7 16h2M15 12h2M15 16h2"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 11l9-7 9 7v10H3zM9 21v-6h6v6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 2l8 3v6c0 5.3-3.4 9.4-8 11-4.6-1.6-8-5.7-8-11V5z"/><path fill="none" stroke="currentColor" stroke-width="2" d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" d="M12 1v5M12 18v5M1 12h5M18 12h5"/></symbol>
+    <symbol id="i-steps" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 20h5v-5h5v-5h5V5h3"/></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M17 2l3 3-3 3M20 5H8a4 4 0 0 0-4 4v2M7 22l-3-3 3-3M4 19h12a4 4 0 0 0 4-4v-2"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M4 4h6a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H4zM20 4h-6a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h6z"/></symbol>
+    <symbol id="i-cross" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M8.5 14L7 22l5-3 5 3-1.5-8"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 17l6-6 4 4 8-8M15 7h6v6"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 3v18M5 21h14M4 7h16M7 7l-3 7a3 3 0 0 0 6 0zM17 7l-3 7a3 3 0 0 0 6 0z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M5 8h14l-1 13H6zM9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7H17l.6-4h-4.1V9c0-.6.4-1 1-1z"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M22.5 7.2a2.8 2.8 0 0 0-2-2C18.8 4.7 12 4.7 12 4.7s-6.8 0-8.5.5a2.8 2.8 0 0 0-2 2C1 8.9 1 12 1 12s0 3.1.5 4.8a2.8 2.8 0 0 0 2 2c1.7.5 8.5.5 8.5.5s6.8 0 8.5-.5a2.8 2.8 0 0 0 2-2c.5-1.7.5-4.8.5-4.8s0-3.1-.5-4.8zM9.8 15.1V8.9l5.7 3.1z"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M9 3a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zM15 3a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-3 3 3 3 0 0 1-3-3"/></symbol>
+  </defs>
+</svg>
+
+<header data-sec="header.s01" class="site-head">
+  <div class="wrap head-top">
+    <a class="brand" href="#home" aria-label="Krav Maga Edge home"><img data-ti="header.s01.i01" src="img/logo.png" alt="Krav Maga Edge, Self Defense System" width="600" height="219"></a>
+    <div class="nav-row" id="navRow">
+      <nav class="nav" aria-label="Main">
+        <a data-t="header.s01.t02" href="#home" data-route="home">Home</a>
+        <a data-t="header.s01.t03" href="#about" data-route="about">About KME</a>
+        <a data-t="header.s01.t04" href="#programs" data-route="programs">Training Programs</a>
+        <a data-t="header.s01.t05" href="#corporate" data-route="corporate">Corporate Training</a>
+        <a data-t="header.s01.t06" href="#events" data-route="events">Events</a>
+        <a data-t="header.s01.t07" href="#blogs" data-route="blogs">Blogs</a>
+        <a data-t="header.s01.t08" href="#contact" data-route="contact">Contact Us</a>
+      </nav>
+    </div>
+    <div class="head-cta">
+      <a data-t="header.s01.t09" class="btn btn-red btn-sm" href="https://wa.me/917032435457" target="_blank" rel="noopener">Join Now</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navRow"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ================= HOME ================= -->
+<div class="page" data-page="home">
+  <section data-sec="home.s01" class="hero" aria-labelledby="h-home">
+    <div class="hero-art hero-photo" aria-hidden="true"></div>
+    <div class="hero-flare" aria-hidden="true"></div>
+    <div class="hero-logo" aria-hidden="true"><video class="hero-logo-bg" id="heroLogoBg" muted playsinline preload="auto"><source src="hero-logo.webm" type="video/webm"><source src="hero-logo.mp4" type="video/mp4"></video><video class="hero-logo-fg" id="heroLogo" muted playsinline preload="auto"><source src="hero-logo.webm" type="video/webm"><source src="hero-logo.mp4" type="video/mp4" id="heroLogoLast"></video></div>
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="kicker" data-c="hero.kicker">Your edge for self-defense</div>
+        <h1 id="h-home"><span data-c="hero.title">Master the art of</span> <span class="r" data-c="hero.title_red">Krav Maga</span></h1>
+        <p class="sub" data-c="hero.text">A modern Krav Maga self-defense academy built to develop knowledge, the right mindset, capability, confidence and readiness for the real world. In person in Hyderabad or online from home.</p>
+        <div class="hero-btns">
+          <a data-t="home.s01.t01" class="btn btn-red" href="https://wa.me/917032435457" target="_blank" rel="noopener">Join Now</a>
+          <a data-t="home.s01.t02" class="btn btn-line" href="#programs">Explore Programs</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div><b data-c="stats.clients">25+</b><span data-t="home.s01.t03">Clients trained</span></div>
+        <div><b data-c="stats.corporate">220+</b><span data-t="home.s01.t04">Corporate employees trained</span></div>
+        <div><b data-c="stats.years">9 yrs</b><span data-t="home.s01.t05">In Krav Maga training</span></div>
+        <div><b data-c="stats.others">1000+</b><span data-t="home.s01.t06">Others trained</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap tiles">
+    <div class="tiles-grid">
+      <a class="tile" href="#programs" data-filter="inperson"><svg class="tile-ico"><use href="#i-pin"/></svg><b data-t="home.s00.t01">In-person<br>Training</b><span data-t="home.s00.t02">Dojo or Residence</span></a>
+      <a class="tile" href="#programs" data-filter="online"><svg class="tile-ico"><use href="#i-screen"/></svg><b data-t="home.s00.t03">Online<br>Training</b><span data-t="home.s00.t04">Train from Home</span></a>
+      <a class="tile" href="#programs" data-filter="community"><svg class="tile-ico"><use href="#i-home"/></svg><b data-t="home.s00.t05">Community<br>Training</b><span data-t="home.s00.t06">Train at your Clubhouse</span></a>
+      <a class="tile" href="#corporate"><svg class="tile-ico"><use href="#i-building"/></svg><b data-t="home.s00.t07">Corporate<br>Workshop</b><span data-t="home.s00.t08">Train at your office</span></a>
+    </div>
+  </div>
+
+  <section data-sec="home.s02" class="sec" aria-labelledby="h-prog">
+    <div class="wrap">
+      <div class="sec-head">
+        <span data-t="home.s02.t01" class="slash">Training programs</span>
+        <h2 data-t="home.s02.t02" id="h-prog">Choose your <span class="r">training</span></h2>
+        <p data-t="home.s02.t03">Structured Krav Maga and self-defense training for individuals, groups, communities and companies. In person in Hyderabad or online from home.</p>
+      </div>
+      <div class="ops">
+        <div>
+          <div class="filters" role="group" aria-label="Filter programs" data-filters="home">
+            <button data-t="home.s02.t04" type="button" aria-pressed="true" data-f="all">All Programs</button>
+            <button data-t="home.s02.t05" type="button" aria-pressed="false" data-f="inperson">In-Person</button>
+            <button data-t="home.s02.t06" type="button" aria-pressed="false" data-f="online">Online</button>
+          </div>
+          <div class="op-list" data-list="home">
+            <article class="op" data-tags="inperson personal">
+              <div class="op-img op-ico"><svg><use href="#i-user"/></svg></div>
+              <div class="op-body">
+                <span data-t="home.s02.t07" class="flag">In-person · Hyderabad</span>
+                <h3 data-t="home.s02.t08">Krav Maga Personal Training</h3>
+                <p data-t="home.s02.t09">One-on-one sessions built around your goals, pace and fitness level.</p>
+                <div class="chips"><span data-t="home.s02.t10" class="chip">1-on-1</span><span data-t="home.s02.t11" class="chip">Your pace</span><span data-t="home.s02.t12" class="chip">Goal based</span></div>
+              </div>
+              <div class="op-side">
+                <ul class="meta"><li data-t="home.s02.t13"><svg><use href="#i-user"/></svg>Personal</li><li data-t="home.s02.t14"><svg><use href="#i-pin"/></svg>Hyderabad</li><li data-t="home.s02.t15"><svg><use href="#i-shield"/></svg>Krav Maga</li></ul>
+                <a data-t="home.s02.t16" class="btn btn-line btn-sm" href="#programs">View Program</a>
+                <a data-t="home.s02.t17" class="btn btn-red btn-sm" href="#enquire">Enquire Now</a>
+              </div>
+            </article>
+            <article class="op" data-tags="inperson group">
+              <div class="op-img op-ico"><svg><use href="#i-group"/></svg></div>
+              <div class="op-body">
+                <span data-t="home.s02.t18" class="flag">In-person · Hyderabad</span>
+                <h3 data-t="home.s02.t19">Krav Maga Group Training</h3>
+                <p data-t="home.s02.t20">Train alongside others in structured group sessions.</p>
+                <div class="chips"><span data-t="home.s02.t21" class="chip">Group</span><span data-t="home.s02.t22" class="chip">Structured</span><span data-t="home.s02.t23" class="chip">Train together</span></div>
+              </div>
+              <div class="op-side">
+                <ul class="meta"><li data-t="home.s02.t24"><svg><use href="#i-group"/></svg>Group</li><li data-t="home.s02.t25"><svg><use href="#i-pin"/></svg>Hyderabad</li><li data-t="home.s02.t26"><svg><use href="#i-shield"/></svg>Krav Maga</li></ul>
+                <a data-t="home.s02.t27" class="btn btn-line btn-sm" href="#programs">View Program</a>
+                <a data-t="home.s02.t28" class="btn btn-red btn-sm" href="#enquire">Enquire Now</a>
+              </div>
+            </article>
+            <article class="op" data-tags="inperson group">
+              <div class="op-img op-ico"><svg><use href="#i-shield"/></svg></div>
+              <div class="op-body">
+                <span data-t="home.s02.t29" class="flag">In-person · Hyderabad</span>
+                <h3 data-t="home.s02.t30">Self-Defense Regular Classes</h3>
+                <p data-t="home.s02.t31">Regular classes on recognizing, avoiding and responding to real-world threats.</p>
+                <div class="chips"><span data-t="home.s02.t32" class="chip">Regular classes</span><span data-t="home.s02.t33" class="chip">Real-world</span><span data-t="home.s02.t34" class="chip">All levels</span></div>
+              </div>
+              <div class="op-side">
+                <ul class="meta"><li data-t="home.s02.t35"><svg><use href="#i-repeat"/></svg>Regular</li><li data-t="home.s02.t36"><svg><use href="#i-pin"/></svg>Hyderabad</li><li data-t="home.s02.t37"><svg><use href="#i-shield"/></svg>Krav Maga</li></ul>
+                <a data-t="home.s02.t38" class="btn btn-line btn-sm" href="#programs">View Program</a>
+                <a data-t="home.s02.t39" class="btn btn-red btn-sm" href="#enquire">Enquire Now</a>
+              </div>
+            </article>
+            <article class="op" data-tags="online group">
+              <div class="op-img op-ico"><svg><use href="#i-screen"/></svg></div>
+              <div class="op-body">
+                <span data-t="home.s02.t40" class="flag">Online · From Home</span>
+                <h3 data-t="home.s02.t41">Online Krav Maga Group Training</h3>
+                <p data-t="home.s02.t42">Live group sessions you join online, from wherever you are.</p>
+                <div class="chips"><span data-t="home.s02.t43" class="chip">Live</span><span data-t="home.s02.t44" class="chip">Group</span><span data-t="home.s02.t45" class="chip">Anywhere</span></div>
+              </div>
+              <div class="op-side">
+                <ul class="meta"><li data-t="home.s02.t46"><svg><use href="#i-group"/></svg>Group</li><li data-t="home.s02.t47"><svg><use href="#i-home"/></svg>From Home</li><li data-t="home.s02.t48"><svg><use href="#i-shield"/></svg>Krav Maga</li></ul>
+                <a data-t="home.s02.t49" class="btn btn-line btn-sm" href="#programs">View Program</a>
+                <a data-t="home.s02.t50" class="btn btn-red btn-sm" href="#enquire">Enquire Now</a>
+              </div>
+            </article>
+            <article class="op" data-tags="online group">
+              <div class="op-img op-ico"><svg><use href="#i-target"/></svg></div>
+              <div class="op-body">
+                <span data-t="home.s02.t51" class="flag">Online · From Home</span>
+                <h3 data-t="home.s02.t52">Online Self-Defense Regular Classes</h3>
+                <p data-t="home.s02.t53">Regular live self-defense classes you follow from home.</p>
+                <div class="chips"><span data-t="home.s02.t54" class="chip">Live</span><span data-t="home.s02.t55" class="chip">Regular classes</span><span data-t="home.s02.t56" class="chip">From home</span></div>
+              </div>
+              <div class="op-side">
+                <ul class="meta"><li data-t="home.s02.t57"><svg><use href="#i-repeat"/></svg>Regular</li><li data-t="home.s02.t58"><svg><use href="#i-home"/></svg>From Home</li><li data-t="home.s02.t59"><svg><use href="#i-shield"/></svg>Krav Maga</li></ul>
+                <a data-t="home.s02.t60" class="btn btn-line btn-sm" href="#programs">View Program</a>
+                <a data-t="home.s02.t61" class="btn btn-red btn-sm" href="#enquire">Enquire Now</a>
+              </div>
+            </article>
+          </div>
+        </div>
+        <aside class="side" aria-label="Krav Maga Edge in numbers">
+          <div class="panel">
+            <h4 data-t="home.s02.t62">The Krav Maga combat cycle</h4>
+            <div class="cycle" aria-hidden="true">
+              <svg viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="72" fill="none" stroke="#E40421" stroke-opacity=".3" stroke-width="1.5" stroke-dasharray="3 6"/>
+                <circle cx="100" cy="100" r="40" fill="rgba(var(--red-rgb), .08)" stroke="#E40421" stroke-opacity=".35"/>
+                <g class="cyc-arc"><path d="M100 28A72 72 0 0 1 172 100" fill="none" stroke="#E40421" stroke-width="3" stroke-linecap="round"/><circle cx="172" cy="100" r="4" fill="#fff"/></g>
+                <g class="cyc-n n1"><circle cx="100" cy="28" r="17"/><text x="100" y="33">01</text></g>
+                <g class="cyc-n n2"><circle cx="172" cy="100" r="17"/><text x="172" y="105">02</text></g>
+                <g class="cyc-n n3"><circle cx="100" cy="172" r="17"/><text x="100" y="177">03</text></g>
+                <g class="cyc-n n4"><circle cx="28" cy="100" r="17"/><text x="28" y="105">04</text></g>
+                <use href="#i-shield" x="80" y="80" width="40" height="40" color="#fff"/>
+              </svg>
+            </div>
+            <ol class="cycle-key"><li data-t="home.s02.t63" class="n1"><b data-t="home.s02.t64">01</b>Detect the threat</li><li data-t="home.s02.t65" class="n2"><b data-t="home.s02.t66">02</b>Defend</li><li data-t="home.s02.t67" class="n3"><b data-t="home.s02.t68">03</b>Counter-attack</li><li data-t="home.s02.t69" class="n4"><b data-t="home.s02.t70">04</b>Escape to safety</li></ol>
+          </div>
+          <div class="stat"><svg><use href="#i-group"/></svg><div><small data-t="home.s02.t71">Clients trained</small><b data-c="stats.clients">25+</b></div></div>
+          <div class="stat"><svg><use href="#i-building"/></svg><div><small data-t="home.s02.t72">Corporate employees trained</small><b data-c="stats.corporate">220+</b></div></div>
+          <div class="stat"><svg><use href="#i-user"/></svg><div><small data-t="home.s02.t73">Others trained</small><b data-c="stats.others">1000+</b></div></div>
+          <a data-t="home.s02.t74" class="btn btn-red" href="#programs">View All Programs</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section data-sec="home.s03" class="sec sec-alt" aria-labelledby="h-rel">
+    <div class="wrap">
+      <div class="sec-head-split">
+        <div>
+          <div data-t="home.s03.t01" class="kicker">Start your training</div>
+          <h2 data-t="home.s03.t02" id="h-rel">How we make you <span class="r">self-reliant</span></h2>
+          <p data-t="home.s03.t03">Through structured instruction, realistic training, progressive skill development and disciplined practice, you build physical capability, mental resilience, situational awareness and confidence that extends far beyond the training floor.</p>
+        </div>
+        <a data-t="home.s03.t04" class="btn btn-red" href="https://wa.me/917032435457" target="_blank" rel="noopener">Join Now</a>
+      </div>
+      <div class="brackets">
+        <article class="bc"><div class="bc-top"><span data-t="home.s03.t05" class="tag">01 / Instruction</span><svg class="bc-ico"><use href="#i-book"/></svg></div><h3 data-t="home.s03.t06">Structured instruction</h3><p data-t="home.s03.t07">Clear, step-by-step teaching from a certified instructor.</p></article>
+        <article class="bc"><div class="bc-top"><span data-t="home.s03.t08" class="tag">02 / Realism</span><svg class="bc-ico"><use href="#i-target"/></svg></div><h3 data-t="home.s03.t09">Realistic training</h3><p data-t="home.s03.t10">Drills built around situations you could actually face.</p></article>
+        <article class="bc"><div class="bc-top"><span data-t="home.s03.t11" class="tag">03 / Progression</span><svg class="bc-ico"><use href="#i-steps"/></svg></div><h3 data-t="home.s03.t12">Progressive skill development</h3><p data-t="home.s03.t13">Each session builds on the last, at your pace.</p></article>
+        <article class="bc"><div class="bc-top"><span data-t="home.s03.t14" class="tag">04 / Discipline</span><svg class="bc-ico"><use href="#i-repeat"/></svg></div><h3 data-t="home.s03.t15">Disciplined practice</h3><p data-t="home.s03.t16">Repetition until the response is automatic.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section data-sec="home.s04" class="sec" aria-labelledby="h-where">
+    <div class="wrap">
+      <div class="sec-head">
+        <span data-t="home.s04.t01" class="slash">Where you can train</span>
+        <h2 data-t="home.s04.t02" id="h-where">In-person or <span class="r">Online</span></h2>
+        <p data-t="home.s04.t03">When can you start training? Right now. Join us on the mat in Hyderabad or from home.</p>
+      </div>
+      <div class="modes">
+        <article class="mode">
+          <div class="mode-img mode-ico"><svg><use href="#i-pin"/></svg><span data-t="home.s04.t04" class="chip">Hyderabad</span></div>
+          <div class="mode-body">
+            <span data-t="home.s04.t05" class="flag">In-person program</span>
+            <h3 data-t="home.s04.t06">In-person training</h3>
+            <p data-t="home.s04.t07">Train in person with us in Hyderabad.</p>
+            <ul class="ticks"><li data-t="home.s04.t08">Krav Maga Personal Training</li><li data-t="home.s04.t09">Krav Maga Group Training</li><li data-t="home.s04.t10">Self-Defense Regular Classes</li></ul>
+            <div class="mode-foot"><a data-t="home.s04.t11" class="btn btn-line btn-sm" href="#programs" data-filter="inperson">See In-Person Programs</a></div>
+          </div>
+        </article>
+        <article class="mode">
+          <div class="mode-img mode-ico"><svg><use href="#i-screen"/></svg><span data-t="home.s04.t12" class="chip">From Home</span></div>
+          <div class="mode-body">
+            <span data-t="home.s04.t13" class="flag">Online program</span>
+            <h3 data-t="home.s04.t14">Online training</h3>
+            <p data-t="home.s04.t15">Start training right from your home.</p>
+            <ul class="ticks"><li data-t="home.s04.t16">Online Krav Maga Group Training</li><li data-t="home.s04.t17">Online Self-Defense Regular Classes</li></ul>
+            <div class="mode-foot"><a data-t="home.s04.t18" class="btn btn-line btn-sm" href="#programs" data-filter="online">See Online Programs</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section data-sec="home.s05" class="sec sec-alt" aria-labelledby="h-coach">
+    <div class="wrap coach">
+      <div class="coach-photo"><img src="img/instructor-full.jpg" data-c-src="instructor.photo" alt="Instructor Ishwar on the range" style="object-position:50% 22%"></div>
+      <div class="coach-body">
+        <div data-t="home.s05.t01" class="kicker">Know your instructor</div>
+        <h2 id="h-coach" data-c="instructor.name">Mr. Ishwar Prasad</h2>
+        <p class="role" data-c="instructor.summary">Certified Krav Maga Instructor and Self Defense Coach. First Aid &amp; CPR trained. Holds expertise in conducting 1&#8209;on&#8209;1 PT, group training and corporate workshops. Also trained military units across India in the Krav Maga combat system.</p>
+        <div class="creds">
+          <div class="cred"><b data-c="instructor.training_years">9 Yrs</b><span data-t="home.s05.t02">Krav Maga training</span></div>
+          <div class="cred"><b data-c="instructor.coaching_years">5 Yrs</b><span data-t="home.s05.t03">Professional coaching</span></div>
+        </div>
+        <a data-t="home.s05.t04" class="btn btn-red" href="#about" style="justify-self:start">Read the Full Profile</a>
+      </div>
+    </div>
+  </section>
+
+  <section data-sec="home.s06" class="sec testi sec-alt" aria-labelledby="h-testi">
+    <div class="wrap">
+      <div class="sec-head">
+        <span data-t="home.s06.t01" class="slash">Client stories</span>
+        <h2 data-t="home.s06.t02" id="h-testi">What our <span class="r">clients say</span></h2>
+      </div>
+      <div class="testi-stage" id="testi" aria-roledescription="carousel" aria-label="Testimonials">
+        <div class="testi-mark" aria-hidden="true">&ldquo;</div>
+        <div class="testi-body" aria-live="polite">
+          <span class="chip testi-ph" id="tPh" hidden>Placeholder</span>
+          <blockquote id="tQuote"></blockquote>
+          <div class="testi-who"><b id="tName"></b><span id="tDetail"></span></div>
+        </div>
+        <div class="testi-nav">
+          <button type="button" class="arrow" id="tPrev" aria-label="Previous testimonial"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <span class="testi-count" id="tCount">01 / 03</span>
+          <button type="button" class="arrow" id="tNext" aria-label="Next testimonial"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+        </div>
+        <div class="testi-bar"><i id="tBar"></i></div>
+      </div>
+    </div>
+    <!-- TESTIMONIALS: edit the list below. Each entry needs "quote", "name" and "detail".
+         Set "placeholder" to false (or remove it) once a real testimonial is added. Add or remove entries freely. -->
+    <script type="application/json" id="testimonials-data">
+    [
+      {"quote": "We had a wonderful experience learning Krav Maga from Ishwar. He trained me & my family in self-defense techniques, situational awareness and striking. The sessions were practical, helpful, and confidence-building for our entire family.", "name": "Bharath Thippireddy", "detail": "Self-Defense Personal Training", "placeholder": false},
+      {"quote": "He is an excellent instructor who is extremely patient, explains techniques well, and creates a comfortable and safe environment for his new students to learn.", "name": "Siri Vennela", "detail": "Krav Maga Personal Training", "placeholder": false},
+      {"quote": "I like the practical and logical approach of the combat system. Krav Maga not just helped me to learn combat, but also made me understand about myself as well.", "name": "Udeeth", "detail": "Krav Maga Personal Training", "placeholder": false},
+      {"quote": "I feel more confident and better prepared to handle challenging situations. His teaching was practical, engaging, and easy to understand. I’m grateful for the experience.", "name": "Hasini", "detail": "Women Self-Defense Personal Training", "placeholder": false},
+      {"quote": "The sessions were fun, practical, and challenging. As someone who loves football, I enjoyed the physical training and learning the importance of discipline, focus, and confidence. Thank you for the excellent training.", "name": "Avyukth", "detail": "Self-Defense Personal Training", "placeholder": false}
+    ]
+    </script>
+  </section>
+
+  <section data-sec="home.s07" class="closing closing-split" id="enquire" aria-labelledby="h-close">
+    <div class="wrap closing-grid">
+      <div class="closing-copy">
+        <span data-t="home.s07.t01" class="slash slash-red">Krav Maga Edge</span>
+        <p data-t="home.s07.t02" class="belief">At Krav Maga Edge, self-defense is not about aggression. It is about preparation, control, awareness, and the ability to protect yourself and those around you.</p>
+        <h2 id="h-close"><span data-t="home.s07.t03">Train with purpose.</span> <span data-t="home.s07.t04">Build capability.</span> <span data-t="home.s07.t05">Stay ready.</span></h2>
+        <div class="hero-btns"><a data-t="home.s07.t06" class="btn btn-red" href="https://wa.me/917032435457" target="_blank" rel="noopener">Join Now</a><a data-t="home.s07.t07" class="btn btn-line" href="#contact">Contact Us</a></div>
+      </div>
+      <div class="home-form">
+      <form class="form enquiry-form" id="homeEnquiry" novalidate>
+        <span data-t="home.s07.t08" class="slash slash-red">Get started</span>
+        <h3 data-t="home.s07.t09">Send an enquiry</h3>
+        <div class="row">
+          <div class="field"><label data-t="home.s07.t10" for="h-name">Name</label><input id="h-name" name="name" required autocomplete="name"></div>
+          <div class="field"><label data-t="home.s07.t11" for="h-phone">Phone</label><input id="h-phone" name="phone" type="tel" required autocomplete="tel"></div>
+        </div>
+        <div class="row row-3">
+          <div class="field"><label data-t="home.s07.t12" for="h-age">Age</label><input id="h-age" name="age" type="number" min="4" max="99" inputmode="numeric"></div>
+          <div class="field"><label data-t="home.s07.t13" for="h-gender">Gender</label>
+            <select id="h-gender" name="gender"><option value="">Select</option><option>Male</option><option>Female</option><option>Other</option><option>Prefer not to say</option></select></div>
+          <div class="field"><label data-t="home.s07.t14" for="h-location">Location</label><input id="h-location" name="location" placeholder="Your area or city" autocomplete="address-level2"></div>
+        </div>
+        <div class="field"><label data-t="home.s07.t15" for="h-email">Email</label><input id="h-email" name="email" type="email" autocomplete="email"></div>
+        <div class="row">
+          <div class="field"><label data-t="home.s07.t16" for="h-interest">I'm interested in</label>
+            <select id="h-interest" name="interest"><option>Krav Maga Personal Training</option><option>Krav Maga Group Training</option><option>Self-Defense Regular Classes</option><option>Online Krav Maga Group Training</option><option>Online Self-Defense Regular Classes</option><option>Community Training</option><option>Corporate Workshop</option></select></div>
+          <div class="field"><label data-t="home.s07.t17" for="h-mode">In person or online</label>
+            <select id="h-mode" name="mode"><option>In person (Hyderabad)</option><option>Online</option></select></div>
+        </div>
+        <div class="field"><label data-t="home.s07.t18" for="h-msg">Message</label><textarea id="h-msg" name="message"></textarea></div>
+        <button data-t="home.s07.t19" class="btn btn-red" type="submit" style="justify-self:start">Send Enquiry</button>
+        <div class="form-out" hidden>
+          <p data-t="home.s07.t20">Your enquiry is ready. Tap below to send it to us on WhatsApp.</p>
+          <a data-t="home.s07.t21" class="btn btn-red btn-sm form-link" href="https://wa.me/917032435457" target="_blank" rel="noopener" style="justify-self:start">Send on WhatsApp</a>
+        </div>
+      </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<div class="page" data-page="about" hidden>
+  <section data-sec="about.s01" class="page-hero" aria-labelledby="h-about">
+    <div class="wrap hero-copy">
+      <div class="crumb"><a href="#home">Home</a> / <b>About KME</b></div>
+      <h1 data-t="about.s01.t01" id="h-about">About <span class="r">Krav Maga Edge</span></h1>
+      <p data-t="about.s01.t02">A modern self-defense academy in Hyderabad, training individuals, communities and companies in person and online.</p>
+    </div>
+  </section>
+
+  <section data-sec="about.s02" class="sec" aria-label="Who we are">
+    <div class="wrap duo">
+      <article class="brief"><span data-t="about.s02.t01" class="slash">What we are</span><h3 data-t="about.s02.t02">A modern self-defense academy</h3><p data-t="about.s02.t03">Krav Maga Edge is a modern self-defense academy built to develop knowledge, the right mindset, capability, confidence and readiness for the real world.</p></article>
+      <article class="brief"><span data-t="about.s02.t04" class="slash">Why we exist</span><h3 data-t="about.s02.t05">Beyond learning techniques</h3><p data-t="about.s02.t06">Our training goes beyond learning techniques. We develop the awareness to recognize danger, the composure to make decisions under pressure, and the practical skills to respond when it matters most.</p></article>
+    </div>
+  </section>
+
+  <section data-sec="about.s03" class="sec sec-alt" aria-label="Vision and mission">
+    <div class="wrap duo">
+      <article class="brief"><span data-t="about.s03.t01" class="slash">Vision</span><h3 data-t="about.s03.t02">Forging a self-defense mindset</h3><p data-t="about.s03.t03">Forging a self-defense mindset in every individual, through the art of Krav Maga.</p></article>
+      <article class="brief"><span data-t="about.s03.t04" class="slash">Mission</span><h3 data-t="about.s03.t05">An essential life skill</h3><p data-t="about.s03.t06">To make Krav Maga self-defense an essential life skill by integrating four components of training.</p>
+        <ol class="components"><li><b data-t="about.s03.t07">01</b><span data-t="about.s03.t08">Physical fitness</span></li><li><b data-t="about.s03.t09">02</b><span data-t="about.s03.t10">Skill development</span></li><li><b data-t="about.s03.t11">03</b><span data-t="about.s03.t12">Mental training</span></li><li><b data-t="about.s03.t13">04</b><span data-t="about.s03.t14">Cognitive growth</span></li></ol>
+      </article>
+    </div>
+  </section>
+
+  <section data-sec="about.s04" class="sec" aria-labelledby="h-values">
+    <div class="wrap">
+      <div class="sec-head"><span data-t="about.s04.t01" class="slash">What we stand for</span><h2 data-t="about.s04.t02" id="h-values">Our <span class="r">values</span></h2></div>
+      <div class="values">
+        <div class="value"><svg><use href="#i-bolt"/></svg><h3 data-t="about.s04.t03">Empowerment</h3></div>
+        <div class="value"><svg><use href="#i-repeat"/></svg><h3 data-t="about.s04.t04">Discipline</h3></div>
+        <div class="value"><svg><use href="#i-trend"/></svg><h3 data-t="about.s04.t05">Growth</h3></div>
+        <div class="value"><svg><use href="#i-scale"/></svg><h3 data-t="about.s04.t06">Ethics</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <section data-sec="about.s05" class="sec sec-alt" aria-labelledby="h-coach2">
+    <div class="wrap coach">
+      <div class="coach-photo"><img src="img/instructor-full.jpg" data-c-src="instructor.photo" alt="Instructor Ishwar on the range" style="object-position:50% 22%"></div>
+      <div class="coach-body">
+        <div data-t="about.s05.t01" class="kicker">Your instructor</div>
+        <h2 id="h-coach2" data-c="instructor.name">Mr. Ishwar Prasad</h2>
+        <ul class="ticks" data-c-list="instructor.points">
+          <li>Certified Krav Maga Instructor</li>
+          <li>Self Defense Coach</li>
+          <li>First Aid &amp; CPR Trained</li>
+          <li>9 years of Krav Maga training</li>
+          <li>5 years of professional coaching experience</li>
+          <li>Expertise in 1-on-1 PT, group training and corporate workshops</li>
+          <li>Trained military units across India in the Krav Maga combat system</li>
+        </ul>
+        <div class="creds">
+          <div class="cred"><b data-c="instructor.training_years">9 Yrs</b><span data-t="about.s05.t02">Krav Maga training</span></div>
+          <div class="cred"><b data-c="instructor.coaching_years">5 Yrs</b><span data-t="about.s05.t03">Professional coaching</span></div>
+        </div>
+        <a data-t="about.s05.t04" class="btn btn-red" href="https://wa.me/917032435457" target="_blank" rel="noopener" style="justify-self:start">Train with Ishwar</a>
+      </div>
+    </div>
+  </section>
+
+  <section data-sec="about.s06" class="sec" aria-labelledby="h-gal">
+    <div class="wrap">
+      <div class="sec-head">
+        <span data-t="about.s06.t01" class="slash">In the field</span>
+        <h2 data-t="about.s06.t02" id="h-gal">Train with <span class="r">purpose</span></h2>
+        <p data-t="about.s06.t03">Moments from the range with Instructor Ishwar. Follow Krav Maga Edge for more.</p>
+      </div>
+      <div class="gallery" data-c-gallery>
+        <figure class="g1"><img src="img/hero-aim.jpg" alt="Instructor Ishwar aiming on the range" loading="lazy" style="object-position:50% 40%"></figure>
+        <figure class="g2"><img src="img/instructor-full.jpg" alt="Instructor Ishwar standing on the range" loading="lazy" style="object-position:50% 30%"></figure>
+        <figure class="g3"><img src="img/instructor-portrait.jpg" alt="Instructor Ishwar on the range" loading="lazy"></figure>
+        <figure class="g4"><img src="img/instructor-team.jpg" alt="Instructor Ishwar with fellow trainees" loading="lazy" style="object-position:50% 35%"></figure>
+      </div>
+      <div class="center"><a data-t="about.s06.t04" class="btn btn-red" href="https://instagram.com/kravmagaedge" target="_blank" rel="noopener">View on Instagram</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= PROGRAMS ================= -->
+<div class="page" data-page="programs" hidden>
+  <section data-sec="programs.s01" class="page-hero" aria-labelledby="h-programs">
+    <div class="wrap hero-copy">
+      <div class="crumb"><a href="#home">Home</a> / <b>Training Programs</b></div>
+      <h1 data-t="programs.s01.t01" id="h-programs">Training <span class="r">Programs</span></h1>
+      <p data-t="programs.s01.t02">Train in person in Hyderabad or online from home.</p>
+    </div>
+  </section>
+
+  <section data-sec="programs.s02" class="sec" aria-label="All programs">
+    <div class="wrap">
+      <div class="filters" role="group" aria-label="Filter programs" data-filters="all">
+        <button data-t="programs.s02.t01" type="button" aria-pressed="true" data-f="all">All Programs</button>
+        <button data-t="programs.s02.t02" type="button" aria-pressed="false" data-f="inperson">In-Person</button>
+        <button data-t="programs.s02.t03" type="button" aria-pressed="false" data-f="online">Online</button>
+        <button data-t="programs.s02.t04" type="button" aria-pressed="false" data-f="community">Community</button>
+        <button data-t="programs.s02.t05" type="button" aria-pressed="false" data-f="corporate">Corporate</button>
+      </div>
+      <div class="prog-grid" data-list="all" style="margin-top:30px">
+        <article class="bc" data-tags="inperson personal"><div class="bc-top"><span data-t="programs.s02.t06" class="tag">In-person</span><svg class="bc-ico"><use href="#i-user"/></svg></div><h3 data-t="programs.s02.t07">Krav Maga Personal Training</h3><p data-t="programs.s02.t08">One-on-one sessions built around your goals, pace and fitness level. At our dojo or your residence.</p><a data-t="programs.s02.t09" class="btn btn-line btn-sm" href="#enquire">Enquire</a></article>
+        <article class="bc" data-tags="inperson group"><div class="bc-top"><span data-t="programs.s02.t10" class="tag">In-person</span><svg class="bc-ico"><use href="#i-group"/></svg></div><h3 data-t="programs.s02.t11">Krav Maga Group Training</h3><p data-t="programs.s02.t12">Train alongside others in structured group sessions.</p><a data-t="programs.s02.t13" class="btn btn-line btn-sm" href="#enquire">Enquire</a></article>
+        <article class="bc" data-tags="inperson group"><div class="bc-top"><span data-t="programs.s02.t14" class="tag">In-person</span><svg class="bc-ico"><use href="#i-shield"/></svg></div><h3 data-t="programs.s02.t15">Self-Defense Regular Classes</h3><p data-t="programs.s02.t16">Regular classes on recognizing, avoiding and responding to real-world threats.</p><a data-t="programs.s02.t17" class="btn btn-line btn-sm" href="#enquire">Enquire</a></article>
+        <article class="bc" data-tags="inperson community group"><div class="bc-top"><span data-t="programs.s02.t18" class="tag">In-person</span><svg class="bc-ico"><use href="#i-home"/></svg></div><h3 data-t="programs.s02.t19">Community Training</h3><p data-t="programs.s02.t20">Self-defense sessions at your clubhouse, apartment community or society.</p><a data-t="programs.s02.t21" class="btn btn-line btn-sm" href="#enquire">Enquire</a></article>
+        <article class="bc" data-tags="inperson corporate group"><div class="bc-top"><span data-t="programs.s02.t22" class="tag">In-person</span><svg class="bc-ico"><use href="#i-building"/></svg></div><h3 data-t="programs.s02.t23">Corporate Workshop</h3><p data-t="programs.s02.t24">Practical self-defense and awareness training at your office.</p><a data-t="programs.s02.t25" class="btn btn-line btn-sm" href="#corporate">See Workshops</a></article>
+        <article class="bc" data-tags="online group"><div class="bc-top"><span data-t="programs.s02.t26" class="tag">Online</span><svg class="bc-ico"><use href="#i-screen"/></svg></div><h3 data-t="programs.s02.t27">Online Krav Maga Group Training</h3><p data-t="programs.s02.t28">Live group sessions you join online, from wherever you are.</p><a data-t="programs.s02.t29" class="btn btn-line btn-sm" href="#enquire">Enquire</a></article>
+        <article class="bc" data-tags="online group"><div class="bc-top"><span data-t="programs.s02.t30" class="tag">Online</span><svg class="bc-ico"><use href="#i-target"/></svg></div><h3 data-t="programs.s02.t31">Online Self-Defense Regular Classes</h3><p data-t="programs.s02.t32">Regular live self-defense classes you follow from home.</p><a data-t="programs.s02.t33" class="btn btn-line btn-sm" href="#enquire">Enquire</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section data-sec="programs.s03" class="sec sec-alt" aria-labelledby="h-start">
+    <div class="wrap">
+      <div class="sec-head"><span data-t="programs.s03.t01" class="slash">How to start</span><h2 data-t="programs.s03.t02" id="h-start">Start in <span class="r">three steps</span></h2></div>
+      <div class="steps">
+        <div class="step"><b data-t="programs.s03.t03">01</b><p data-t="programs.s03.t04">Message us on WhatsApp or fill in the enquiry form.</p></div>
+        <div class="step"><b data-t="programs.s03.t05">02</b><p data-t="programs.s03.t06">Tell us your goals and whether you prefer online or in person.</p></div>
+        <div class="step"><b data-t="programs.s03.t07">03</b><p data-t="programs.s03.t08">We'll recommend the right program and get you started.</p></div>
+      </div>
+      <div class="center" style="gap:12px;flex-wrap:wrap"><a data-t="programs.s03.t09" class="btn btn-red" href="https://wa.me/c/917032435457" target="_blank" rel="noopener">Browse our WhatsApp Catalogue</a><a data-t="programs.s03.t10" class="btn btn-line" href="#contact">Enquire Now</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= CORPORATE ================= -->
+<div class="page" data-page="corporate" hidden>
+  <section data-sec="corporate.s01" class="page-hero" aria-labelledby="h-corp">
+    <div class="wrap hero-copy">
+      <div class="crumb"><a href="#home">Home</a> / <b>Corporate Training</b></div>
+      <h1 data-t="corporate.s01.t01" id="h-corp">Self-defense training <span class="r">for your team</span></h1>
+      <p data-t="corporate.s01.t02">220+ corporate employees trained.</p>
+      <div class="hero-btns"><a data-t="corporate.s01.t03" class="btn btn-red" href="https://wa.me/917032435457" target="_blank" rel="noopener">Plan a Workshop</a></div>
+    </div>
+  </section>
+
+  <section data-sec="corporate.s02" class="sec" aria-label="Why it matters">
+    <div class="wrap ops">
+      <article class="brief"><span data-t="corporate.s02.t01" class="slash">Why it matters</span><h3 data-t="corporate.s02.t02">Safety goes beyond the office</h3><p data-t="corporate.s02.t03">Our workshops give employees the awareness to recognize danger, the composure to act under pressure, and practical skills to protect themselves on the commute, while travelling and at home.</p><p data-t="corporate.s02.t04">Delivered on-site in Hyderabad or online for distributed teams, by a certified Krav Maga instructor who is also First Aid &amp; CPR trained.</p></article>
+      <aside class="side">
+        <div class="stat"><svg><use href="#i-building"/></svg><div><small data-t="corporate.s02.t05">Corporate employees trained</small><b data-c="stats.corporate">220+</b></div></div>
+        <div class="stat"><svg><use href="#i-group"/></svg><div><small data-t="corporate.s02.t06">Clients trained</small><b data-c="stats.clients">25+</b></div></div>
+      </aside>
+    </div>
+  </section>
+
+  <section data-sec="corporate.s03" class="sec sec-alt" aria-labelledby="h-covers">
+    <div class="wrap">
+      <div class="sec-head"><span data-t="corporate.s03.t01" class="slash">Workshop brief</span><h2 data-t="corporate.s03.t02" id="h-covers">What a workshop <span class="r">covers</span></h2></div>
+      <div class="brackets">
+        <article class="bc"><div class="bc-top"><span data-t="corporate.s03.t03" class="tag">01 / Awareness</span><svg class="bc-ico"><use href="#i-eye"/></svg></div><h3 data-t="corporate.s03.t04">Situational awareness</h3><p data-t="corporate.s03.t05">Situational awareness and threat recognition.</p></article>
+        <article class="bc"><div class="bc-top"><span data-t="corporate.s03.t06" class="tag">02 / Composure</span><svg class="bc-ico"><use href="#i-brain"/></svg></div><h3 data-t="corporate.s03.t07">Decisions under pressure</h3><p data-t="corporate.s03.t08">Staying composed and making decisions under pressure.</p></article>
+        <article class="bc"><div class="bc-top"><span data-t="corporate.s03.t09" class="tag">03 / Technique</span><svg class="bc-ico"><use href="#i-shield"/></svg></div><h3 data-t="corporate.s03.t10">Practical techniques</h3><p data-t="corporate.s03.t11">Practical, easy-to-learn self-defense techniques.</p></article>
+        <article class="bc"><div class="bc-top"><span data-t="corporate.s03.t12" class="tag">04 / Confidence</span><svg class="bc-ico"><use href="#i-award"/></svg></div><h3 data-t="corporate.s03.t13">Personal safety habits</h3><p data-t="corporate.s03.t14">Confidence and personal safety habits.</p></article>
+      </div>
+      <div class="center"><a data-t="corporate.s03.t15" class="btn btn-red" href="https://wa.me/917032435457" target="_blank" rel="noopener">Plan a Workshop for Your Team</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= EVENTS ================= -->
+<div class="page" data-page="events" hidden>
+  <section data-sec="events.s01" class="page-hero" aria-labelledby="h-events">
+    <div class="wrap hero-copy">
+      <div class="crumb"><a href="#home">Home</a> / <b>Events</b></div>
+      <h1 data-t="events.s01.t01" id="h-events">Krav Maga Edge <span class="r">Events</span></h1>
+      <p data-t="events.s01.t02">Workshops, seminars and special training sessions.</p>
+    </div>
+  </section>
+  <!-- EVENTS: add events in content/site.json (or in the editor). -->
+  <section data-sec="events.s02" class="sec" aria-label="Upcoming events">
+    <div class="wrap" data-c-posts="events">
+      <div class="blog-empty">
+        <span data-t="events.s02.t01" class="slash slash-red">Coming soon</span>
+        <h2 data-t="events.s02.t02">Upcoming events will be announced here</h2>
+        <p data-t="events.s02.t03">Message us on WhatsApp or follow Krav Maga Edge on Instagram to hear about the next workshop first.</p>
+        <div class="hero-btns" style="justify-content:center"><a data-t="events.s02.t04" class="btn btn-red" href="https://wa.me/917032435457" target="_blank" rel="noopener">Ask on WhatsApp</a><a data-t="events.s02.t05" class="btn btn-line" href="https://instagram.com/kravmagaedge" target="_blank" rel="noopener">Follow on Instagram</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= BLOGS ================= -->
+<div class="page" data-page="blogs" hidden>
+  <section data-sec="blogs.s01" class="page-hero" aria-labelledby="h-blogs">
+    <div class="wrap hero-copy">
+      <div class="crumb"><a href="#home">Home</a> / <b>Blogs</b></div>
+      <h1 data-t="blogs.s01.t01" id="h-blogs">Krav Maga Edge <span class="r">Blogs</span></h1>
+      <p data-t="blogs.s01.t02">Articles on Krav Maga, self-defense and personal safety.</p>
+    </div>
+  </section>
+  <!-- BLOGS: add posts in content/site.json (or in the editor). -->
+  <section data-sec="blogs.s02" class="sec" aria-label="Blog posts">
+    <div class="wrap" data-c-posts="blogs">
+      <div class="blog-empty">
+        <span data-t="blogs.s02.t01" class="slash slash-red">Coming soon</span>
+        <h2 data-t="blogs.s02.t02">Our first articles are on the way</h2>
+        <p data-t="blogs.s02.t03">Follow Krav Maga Edge on Instagram and Facebook for training tips and updates in the meantime.</p>
+        <div class="hero-btns" style="justify-content:center"><a data-t="blogs.s02.t04" class="btn btn-red" href="https://instagram.com/kravmagaedge" target="_blank" rel="noopener">Follow on Instagram</a><a data-t="blogs.s02.t05" class="btn btn-line" href="https://www.facebook.com/profile.php?id=61595392348124" target="_blank" rel="noopener">Follow on Facebook</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= CONTACT ================= -->
+<div class="page" data-page="contact" hidden>
+  <section data-sec="contact.s01" class="page-hero" aria-labelledby="h-contact">
+    <div class="wrap hero-copy">
+      <div class="crumb"><a href="#home">Home</a> / <b>Contact Us</b></div>
+      <h1 data-t="contact.s01.t01" id="h-contact">Start training <span class="r">today</span></h1>
+      <p data-t="contact.s01.t02">Message us, call, or send an enquiry. We'll help you pick the right program.</p>
+    </div>
+  </section>
+
+  <section data-sec="contact.s02" class="sec" aria-label="Contact options">
+    <div class="wrap contact">
+      <div class="channels">
+        <a class="channel" href="https://wa.me/917032435457" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><div><small data-t="contact.s02.t01">WhatsApp</small><strong data-c="contact.whatsapp">+91 70324 35457</strong></div></a>
+        <a class="channel" href="https://wa.me/c/917032435457" target="_blank" rel="noopener"><svg><use href="#i-bag"/></svg><div><small data-t="contact.s02.t02">Browse programs</small><strong data-t="contact.s02.t03">WhatsApp Catalogue</strong></div></a>
+        <div class="channel"><svg><use href="#i-phone"/></svg><div><small data-t="contact.s02.t04">Call</small><strong data-c="contact.whatsapp">+91 70324 35457</strong></div></div>
+        <a class="channel" href="https://instagram.com/kravmagaedge" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg><div><small data-t="contact.s02.t05">Instagram</small><strong data-c-handle>@kravmagaedge</strong></div></a>
+        <a class="channel" href="https://www.facebook.com/profile.php?id=61595392348124" target="_blank" rel="noopener"><svg><use href="#i-fb"/></svg><div><small data-t="contact.s02.t06">Facebook</small><strong data-t="contact.s02.t07">Krav Maga Edge</strong></div></a>
+        <a class="channel" data-yt href="#" target="_blank" rel="noopener" hidden><svg><use href="#i-yt"/></svg><div><small>YouTube</small><strong>Krav Maga Edge</strong></div></a>
+        <div class="channel"><svg><use href="#i-pin"/></svg><div><small data-t="contact.s02.t08">Where we train</small><strong data-t="contact.s02.t09">In person in Hyderabad, and online from home</strong></div></div>
+      </div>
+      <form class="form enquiry-form" id="enquiry" novalidate>
+        <span data-t="contact.s02.t10" class="slash slash-red">Enquiry form</span>
+        <h3 data-t="contact.s02.t11">Send an enquiry</h3>
+        <div class="row">
+          <div class="field"><label data-t="contact.s02.t12" for="f-name">Name</label><input id="f-name" name="name" required autocomplete="name"></div>
+          <div class="field"><label data-t="contact.s02.t13" for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" required autocomplete="tel"></div>
+        </div>
+        <div class="row row-3">
+          <div class="field"><label data-t="contact.s02.t14" for="f-age">Age</label><input id="f-age" name="age" type="number" min="4" max="99" inputmode="numeric"></div>
+          <div class="field"><label data-t="contact.s02.t15" for="f-gender">Gender</label>
+            <select id="f-gender" name="gender"><option value="">Select</option><option>Male</option><option>Female</option><option>Other</option><option>Prefer not to say</option></select></div>
+          <div class="field"><label data-t="contact.s02.t16" for="f-location">Location</label><input id="f-location" name="location" placeholder="Your area or city" autocomplete="address-level2"></div>
+        </div>
+        <div class="field"><label data-t="contact.s02.t17" for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+        <div class="row">
+          <div class="field"><label data-t="contact.s02.t18" for="f-interest">I'm interested in</label>
+            <select id="f-interest" name="interest"><option>Krav Maga Personal Training</option><option>Krav Maga Group Training</option><option>Self-Defense Regular Classes</option><option>Online Krav Maga Group Training</option><option>Online Self-Defense Regular Classes</option><option>Community Training</option><option>Corporate Workshop</option></select></div>
+          <div class="field"><label data-t="contact.s02.t19" for="f-mode">In person or online</label>
+            <select id="f-mode" name="mode"><option>In person (Hyderabad)</option><option>Online</option></select></div>
+        </div>
+        <div class="field"><label data-t="contact.s02.t20" for="f-msg">Message</label><textarea id="f-msg" name="message"></textarea></div>
+        <button data-t="contact.s02.t21" class="btn btn-red" type="submit" style="justify-self:start">Send Enquiry</button>
+        <div class="form-out" hidden>
+          <p data-t="contact.s02.t22">Your enquiry is ready. Tap below to send it to us on WhatsApp.</p>
+          <a data-t="contact.s02.t23" class="btn btn-red btn-sm form-link" href="https://wa.me/917032435457" target="_blank" rel="noopener" style="justify-self:start">Send on WhatsApp</a>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer data-sec="footer.s01" class="site-foot">
+  <div class="foot-net">
+    <div class="wrap">
+      <div><h4 data-t="footer.s01.t01">Join Krav Maga Edge</h4><p data-t="footer.s01.t02">Your edge for self defense.</p></div>
+      <a data-t="footer.s01.t03" class="btn btn-red" href="https://wa.me/917032435457" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Message us on WhatsApp</a>
+    </div>
+  </div>
+  <div class="wrap foot-main">
+    <div class="foot-brand">
+      <img data-ti="footer.s01.i04" src="img/logo.png" alt="Krav Maga Edge" width="600" height="219">
+      <p data-c="footer.text">Your Edge for Self Defense.<br>A modern Krav Maga self-defense academy based in Hyderabad.</p>
+      <div class="socials">
+        <a href="https://instagram.com/kravmagaedge" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+        <a href="https://www.facebook.com/profile.php?id=61595392348124" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+        <a href="https://wa.me/917032435457" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+        <a data-yt href="#" target="_blank" rel="noopener" aria-label="YouTube" hidden><svg><use href="#i-yt"/></svg></a>
+      </div>
+    </div>
+    <div class="foot-col"><h4 data-t="footer.s01.t05">Pages</h4><ul><li><a data-t="footer.s01.t06" href="#home">Home</a></li><li><a data-t="footer.s01.t07" href="#about">About KME</a></li><li><a data-t="footer.s01.t08" href="#programs">Training Programs</a></li><li><a data-t="footer.s01.t09" href="#corporate">Corporate Training</a></li><li><a data-t="footer.s01.t10" href="#events">Events</a></li><li><a data-t="footer.s01.t11" href="#blogs">Blogs</a></li><li><a data-t="footer.s01.t12" href="#contact">Contact Us</a></li></ul></div>
+    <div class="foot-col"><h4 data-t="footer.s01.t13">In-person</h4><ul><li data-t="footer.s01.t14">Krav Maga Personal Training</li><li data-t="footer.s01.t15">Krav Maga Group Training</li><li data-t="footer.s01.t16">Self-Defense Regular Classes</li><li data-t="footer.s01.t17">Community Training</li><li data-t="footer.s01.t18">Corporate Workshop</li></ul></div>
+    <div class="foot-col"><h4 data-t="footer.s01.t19">Online</h4><ul><li data-t="footer.s01.t20">Online Krav Maga Group Training</li><li data-t="footer.s01.t21">Online Self-Defense Regular Classes</li></ul></div>
+  </div>
+  <div class="foot-bar"><div class="wrap"><span data-t="footer.s01.t22">© 2026 Krav Maga Edge, Hyderabad</span><span data-t="footer.s01.t23">Your Edge for Self Defense</span></div></div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/917032435457" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg style="color:#06210f"><use href="#i-wa"/></svg></a>
+
+<script>
+(function heroLoop() {
+  // Home hero: each time the hero comes into view, show it for 3s, fade into the logo film once (~4s), fade back.
+  // It plays again only after the visitor scrolls (or navigates) away from the hero and returns.
+  var v = document.getElementById('heroLogo'), bg = document.getElementById('heroLogoBg');
+  if (!v) return;
+  var hero = v.closest('.hero'), page = v.closest('.page');
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { v.parentNode.remove(); return; }
+  var timer = null, on = false, broken = false, played = false, inView = false;
+  function active() { return !broken && !played && inView && !page.hidden && !document.hidden; }
+  function later(fn, ms) { clearTimeout(timer); timer = setTimeout(fn, ms); }
+  function show() {
+    if (!active()) return;
+    try { v.currentTime = 0; bg.currentTime = 0; } catch (e) {}
+    var q = bg.play(); if (q && q.catch) q.catch(function () {});
+    var p = v.play();
+    function go() { if (!active()) return; on = true; played = true; hero.classList.add('logo-on'); later(hide, 4800); }
+    if (p && p.then) p.then(go, blocked); else go();
+  }
+  function hide() {
+    if (!on) return;
+    on = false; clearTimeout(timer); hero.classList.remove('logo-on');
+    setTimeout(function () { try { v.pause(); bg.pause(); } catch (e) {} }, 850);
+  }
+  function fail() { broken = true; stop(); }
+  // Some phones (in-app browsers, battery saver) refuse to start video on their own.
+  // Wait for the visitor's first tap, which unlocks playback, then carry on as normal.
+  var waiting = false;
+  function blocked() {
+    stop(); if (waiting) return; waiting = true;
+    function unlock() {
+      document.removeEventListener('touchend', unlock, true); document.removeEventListener('click', unlock, true);
+      waiting = false;
+      [v, bg].forEach(function (m) { var q = m.play(); if (q && q.then) q.then(function () { if (!on) m.pause(); }, function () {}); });
+      if (active()) later(show, 1200);
+    }
+    document.addEventListener('touchend', unlock, true); document.addEventListener('click', unlock, true);
+  }
+  function stop() { clearTimeout(timer); on = false; hero.classList.remove('logo-on'); try { v.pause(); bg.pause(); } catch (e) {} }
+  function arrive() { played = false; stop(); if (active()) later(show, 3000); }
+  function leave() { if (on) played = true; stop(); }
+  v.addEventListener('ended', hide);
+  v.addEventListener('error', fail);
+  document.getElementById('heroLogoLast').addEventListener('error', fail);
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) { if (on) played = true; stop(); } else if (active()) later(show, 3000);
+  });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) {
+      var e = es[es.length - 1], r = e.intersectionRatio, s = e.intersectionRect.height / (window.innerHeight || 1);
+      if (!inView && (r >= 0.5 || s >= 0.5)) { inView = true; arrive(); }
+      else if (inView && r < 0.15 && s < 0.2) { inView = false; leave(); }
+    }, { threshold: [0, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6] }).observe(hero);
+  } else { inView = true; setTimeout(arrive, 0); }
+})();
+
+(function () {
+  var pages = document.querySelectorAll('.page');
+  var links = document.querySelectorAll('.nav a[data-route]');
+  var navRow = document.getElementById('navRow');
+  var menuBtn = document.getElementById('menuBtn');
+  var pending = null;
+
+  function setFilter(group, f) {
+    var bar = document.querySelector('[data-filters="' + group + '"]');
+    var list = document.querySelector('[data-list="' + group + '"]');
+    if (!bar || !list) return;
+    var btns = bar.querySelectorAll('button');
+    var has = false;
+    btns.forEach(function (b) { if (b.dataset.f === f) has = true; });
+    if (!has) f = 'all';
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.f === f ? 'true' : 'false'); });
+    list.querySelectorAll('[data-tags]').forEach(function (el) {
+      el.hidden = !(f === 'all' || el.dataset.tags.split(' ').indexOf(f) > -1);
+    });
+  }
+  document.querySelectorAll('[data-filters]').forEach(function (bar) {
+    bar.addEventListener('click', function (e) {
+      var b = e.target.closest('button');
+      if (b) setFilter(bar.dataset.filters, b.dataset.f);
+    });
+  });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[data-filter]');
+    if (a) pending = a.dataset.filter;
+  });
+
+  function route() {
+    var id = (location.hash || '#home').slice(1), jump = null;
+    if (id === 'enquire') { id = 'home'; jump = 'enquire'; }
+    if (!document.querySelector('.page[data-page="' + id + '"]')) id = 'home';
+    pages.forEach(function (p) { p.hidden = p.dataset.page !== id; });
+    links.forEach(function (a) { a.classList.toggle('on', a.dataset.route === id); if (a.dataset.route === id) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+    if (id === 'programs') setFilter('all', pending || 'all');
+    pending = null;
+    navRow.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    if (jump) document.getElementById(jump).scrollIntoView(); else window.scrollTo(0, 0);
+    var titles = { home: 'Krav Maga Edge', about: 'About KME | Krav Maga Edge', programs: 'Training Programs | Krav Maga Edge', corporate: 'Corporate Training | Krav Maga Edge', events: 'Events | Krav Maga Edge', blogs: 'Blogs | Krav Maga Edge', contact: 'Contact Us | Krav Maga Edge' };
+    document.title = titles[id];
+  }
+  window.addEventListener('hashchange', route);
+  route();
+
+  menuBtn.addEventListener('click', function () {
+    var open = navRow.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  (function testimonials() {
+    var items = [];
+    try { items = JSON.parse(document.getElementById('testimonials-data').textContent); } catch (e) {}
+    if (!items.length) { document.getElementById('testi').closest('section').hidden = true; return; }
+    var i = 0, timer = null, stage = document.getElementById('testi');
+    var q = document.getElementById('tQuote'), n = document.getElementById('tName'), d = document.getElementById('tDetail');
+    var ph = document.getElementById('tPh'), c = document.getElementById('tCount'), bar = document.getElementById('tBar');
+    var pad = function (x) { return (x < 10 ? '0' : '') + x; };
+    function show(k) {
+      i = (k + items.length) % items.length;
+      var t = items[i];
+      stage.classList.remove('swap'); void stage.offsetWidth; stage.classList.add('swap');
+      q.textContent = t.quote || ''; n.textContent = t.name || ''; d.textContent = t.detail || '';
+      ph.hidden = !t.placeholder;
+      c.textContent = pad(i + 1) + ' / ' + pad(items.length);
+      bar.style.width = ((i + 1) / items.length * 100) + '%';
+    }
+    function auto() { clearInterval(timer); if (items.length > 1 && !matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(function () { show(i + 1); }, 7000); }
+    document.getElementById('tPrev').addEventListener('click', function () { show(i - 1); auto(); });
+    document.getElementById('tNext').addEventListener('click', function () { show(i + 1); auto(); });
+    stage.addEventListener('mouseenter', function () { clearInterval(timer); });
+    stage.addEventListener('mouseleave', auto);
+    if (items.length < 2) document.querySelector('.testi-nav').hidden = true;
+    show(0); auto();
+    window.KME_testi = function (list) {
+      items = list; stage.closest('section').hidden = !items.length;
+      document.querySelector('.testi-nav').hidden = items.length < 2;
+      if (items.length) { show(0); auto(); }
+    };
+  })();
+
+  document.querySelectorAll('.enquiry-form').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = function (k) { return form.elements.namedItem(k); };
+      var v = function (k) { var el = f(k); return el ? el.value.trim() : ''; };
+      var name = f('name'), phone = f('phone');
+      [name, phone].forEach(function (el) { el.style.borderColor = el.value.trim() ? '' : 'var(--red)'; });
+      if (!name.value.trim() || !phone.value.trim()) { (name.value.trim() ? phone : name).focus(); return; }
+      var opt = function (label, k) { return v(k) ? '\n' + label + ': ' + v(k) : ''; };
+      var text = 'Hello Krav Maga Edge, I would like to enquire about training.\n' +
+        'Name: ' + v('name') + '\nPhone: ' + v('phone') +
+        opt('Age', 'age') + opt('Gender', 'gender') + opt('Location', 'location') + opt('Email', 'email') +
+        '\nInterested in: ' + v('interest') + '\nMode: ' + v('mode') + opt('Message', 'message');
+      form.querySelector('.form-link').href = 'https://wa.me/' + (window.KME_WA || '917032435457') + '?text=' + encodeURIComponent(text);
+      form.querySelector('.form-out').hidden = false;
+    });
+  });
+})();
+</script>
+<script>
+/* Editable content: text and photos come from content/site.json (edit it in Pages CMS).
+   The text already in this page is the fallback if that file can't be loaded. */
+(function siteContent() {
+  function get(o, path) { return path.split('.').reduce(function (a, k) { return a == null ? a : a[k]; }, o); }
+  function setText(el, v) {
+    el.textContent = '';
+    String(v).split('\n').forEach(function (line, i) { if (i) el.appendChild(document.createElement('br')); el.appendChild(document.createTextNode(line)); });
+  }
+  function src(p) { return String(p).replace(/^\/(?!\/)/, ''); }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; }
+  // Every other heading, paragraph, button, list item and photo carries a data-t / data-ti key.
+  // Text in [square brackets] shows in red; a new line becomes a line break.
+  function isRich(e) { for (var i = 0; i < e.children.length; i++) { var t = e.children[i].tagName; if (t !== 'SPAN' && t !== 'BR') return false; } return true; }
+  function norm(s) { return s.replace(/\s+/g, ' '); }
+  function getVal(e) {
+    var s = '';
+    if (isRich(e)) {
+      e.childNodes.forEach(function (n) {
+        if (n.nodeType === 3) s += n.nodeValue;
+        else if (n.tagName === 'BR') s += '\n';
+        else s += n.classList.contains('r') ? '[' + n.textContent + ']' : n.textContent;
+      });
+    } else e.childNodes.forEach(function (n) { if (n.nodeType === 3) s += n.nodeValue; });
+    s = s.split('\n').map(function (l) { return norm(l).trim(); }).join('\n').trim();
+    return e.tagName === 'A' ? { text: s, link: e.getAttribute('href') } : s;
+  }
+  function setVal(e, v) {
+    if (v == null) return;
+    if (typeof v === 'object') {
+      if (v.link && e.tagName === 'A' && (e.getAttribute('href') || '').charAt(0) !== '#') e.setAttribute('href', v.link);
+      v = v.text;
+    }
+    if (typeof v !== 'string' || !v.trim()) return;
+    var cur = getVal(e); if ((cur.text != null ? cur.text : cur) === v) return;
+    if (isRich(e)) {
+      e.textContent = '';
+      v.split('\n').forEach(function (line, i) {
+        if (i) e.appendChild(document.createElement('br'));
+        line.split(/(\[[^\]]*\])/).forEach(function (part) {
+          if (!part) return;
+          if (part.charAt(0) === '[' && part.slice(-1) === ']') e.appendChild(el('span', 'r', part.slice(1, -1)));
+          else e.appendChild(document.createTextNode(part));
+        });
+      });
+    } else {
+      var done = false;
+      e.childNodes.forEach(function (n) {
+        if (n.nodeType !== 3 || !n.nodeValue.trim()) return;
+        if (!done) { n.nodeValue = n.nodeValue.replace(/\S[\s\S]*\S|\S/, v); done = true; } else n.nodeValue = ' ';
+      });
+    }
+  }
+  window.KME_edit = { get: getVal, set: setVal };
+  var FONTS = { 'Oswald': 'Oswald:wght@300..700', 'Montserrat': 'Montserrat:wght@300..900', 'Poppins': 'Poppins:wght@300;400;500;600;700;800;900', 'Roboto': 'Roboto:wght@300..900', 'Barlow': 'Barlow:wght@300;400;500;600;700;800;900', 'Bebas Neue': 'Bebas+Neue' };
+  function applyTheme(t) {
+    var r = document.documentElement.style, hex = /^#[0-9a-f]{6}$/i;
+    if (hex.test(t.red || '')) {
+      r.setProperty('--red', t.red);
+      var n = parseInt(t.red.slice(1), 16), d = function (x) { return Math.round(x * .86); };
+      r.setProperty('--red-hover', 'rgb(' + d(n >> 16) + ',' + d(n >> 8 & 255) + ',' + d(n & 255) + ')');
+      r.setProperty('--red-rgb', (n >> 16) + ',' + (n >> 8 & 255) + ',' + (n & 255));
+    }
+    if (hex.test(t.background || '')) { r.setProperty('--bg', t.background); document.body.style.background = t.background; }
+    if (hex.test(t.text || '')) r.setProperty('--fg', t.text);
+    if (t.font && FONTS[t.font]) {
+      var l = document.createElement('link'); l.rel = 'stylesheet';
+      l.href = 'https://fonts.googleapis.com/css2?family=' + FONTS[t.font] + '&display=swap'; document.head.appendChild(l);
+      r.setProperty('--font', '"' + t.font + '", "Helvetica Neue", Helvetica, Arial, sans-serif');
+    }
+  }
+  function applyPages(pages) {
+    Object.keys(pages).forEach(function (pg) {
+      Object.keys(pages[pg] || {}).forEach(function (s) {
+        var sec = pages[pg][s] || {}, base = pg + '.' + s;
+        var node = document.querySelector('[data-sec="' + base + '"]');
+        if (node && sec.show === false) node.hidden = true;
+        Object.keys(sec).forEach(function (k) {
+          if (k === 'show') return;
+          var key = base + '.' + k, v = sec[k];
+          if (k.charAt(0) === 'i') { var im = document.querySelector('[data-ti="' + key + '"]'); if (im && v && src(v) !== im.getAttribute('src')) im.src = src(v); }
+          else document.querySelectorAll('[data-t="' + key + '"]').forEach(function (e) { setVal(e, v); });
+        });
+      });
+    });
+  }
+  function apply(c) {
+    if (c.theme) applyTheme(c.theme);
+    if (c.pages) applyPages(c.pages);
+    document.querySelectorAll('[data-c]').forEach(function (e) { var v = get(c, e.dataset.c); if (typeof v === 'string' && v) setText(e, v); });
+    document.querySelectorAll('[data-c-src]').forEach(function (e) { var v = get(c, e.dataset.cSrc); if (v && src(v) !== e.getAttribute('src')) e.src = src(v); });
+    document.querySelectorAll('[data-c-list]').forEach(function (ul) {
+      var v = get(c, ul.dataset.cList); if (!Array.isArray(v) || !v.length) return;
+      ul.textContent = ''; v.forEach(function (t) { if (t) ul.appendChild(el('li', '', t)); });
+    });
+    var hero = get(c, 'hero.image') && src(get(c, 'hero.image'));
+    if (hero && hero !== 'im' + 'g/hero-aim.jpg') document.documentElement.style.setProperty('--hero-img', 'url("' + encodeURI(hero) + '")');
+    var gal = document.querySelector('[data-c-gallery]');
+    if (gal && Array.isArray(c.gallery) && c.gallery.length) {
+      gal.textContent = '';
+      var pics = c.gallery.filter(function (g) { return g && g.image; });
+      pics.forEach(function (g, i) {
+        var last = i === pics.length - 1 && pics.length % 2 === 1;
+        var f = el('figure', last ? 'g4' : 'g' + (i % 4 + 1)), im = el('img');
+        if (last) { f.style.cssText = 'grid-column:1 / -1;position:relative;aspect-ratio:2.39 / 1'; im.style.cssText = 'position:absolute;inset:0'; }
+        im.src = src(g.image); im.alt = g.caption || 'Krav Maga Edge'; im.loading = 'lazy';
+        if (g.focus) im.style.objectPosition = g.focus;
+        f.appendChild(im); gal.appendChild(f);
+      });
+    }
+    ['events', 'blogs'].forEach(function (kind) {
+      var list = (c[kind] || []).filter(function (p) { return p && p.title; });
+      var box = document.querySelector('[data-c-posts="' + kind + '"]');
+      if (!box || !list.length) return;
+      var grid = el('div', 'post-grid');
+      list.forEach(function (p) {
+        var a = el('article', 'bc post');
+        if (p.image) { var im = el('img', 'post-img'); im.src = src(p.image); im.alt = p.title; im.loading = 'lazy'; a.appendChild(im); }
+        var meta = [p.date, p.place].filter(Boolean).join(' · ');
+        var top = el('div', 'bc-top'); if (meta) top.appendChild(el('span', 'tag', meta)); a.appendChild(top);
+        a.appendChild(el('h3', '', p.title));
+        if (p.text) { var para = el('p'); setText(para, p.text); a.appendChild(para); }
+        if (p.link) { var b = el('a', 'btn btn-line btn-sm', p.button || (kind === 'blogs' ? 'Read more' : 'Know more')); b.href = p.link; b.target = '_blank'; b.rel = 'noopener'; a.appendChild(b); }
+        grid.appendChild(a);
+      });
+      box.textContent = ''; box.appendChild(grid);
+    });
+    var ct = c.contact || {};
+    var wa = String(ct.whatsapp || '').replace(/\D/g, '');
+    if (wa) {
+      window.KME_WA = wa;
+      document.querySelectorAll('a[href*="wa.me/"]').forEach(function (a) { a.href = a.getAttribute('href').replace(/wa\.me\/(c\/)?\d+/, 'wa.me/$1' + wa); });
+    }
+    [['instagram', 'instagram.com/'], ['facebook', 'facebook.com/']].forEach(function (s) {
+      if (!ct[s[0]]) return;
+      document.querySelectorAll('a[href*="' + s[1] + '"]').forEach(function (a) { a.href = ct[s[0]]; });
+    });
+    if (ct.instagram) {
+      var handle = ct.instagram.replace(/\/+$/, '').split('/').pop().split('?')[0];
+      document.querySelectorAll('[data-c-handle]').forEach(function (e) { if (handle) e.textContent = '@' + handle; });
+    }
+    document.querySelectorAll('[data-yt]').forEach(function (a) { if (ct.youtube) { a.href = ct.youtube; a.hidden = false; } else a.hidden = true; });
+    if (Array.isArray(c.testimonials) && window.KME_testi) window.KME_testi(c.testimonials.filter(function (t) { return t && t.quote; }));
+  }
+  var inline = document.getElementById('site-content');
+  if (inline) { try { apply(JSON.parse(inline.textContent)); } catch (e) {} return; }
+  if (location.protocol === 'file:') return;
+  fetch('content/site.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (c) { if (c) apply(c); }).catch(function () {});
+})();
+</script>
